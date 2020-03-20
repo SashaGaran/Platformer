@@ -2,5 +2,121 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player</name>
-    <events />
+    <events>
+        <comment>Basic</comment>
+        <event-block sid="566399919168753">
+            <conditions>
+                <condition id="2" name="Key is down" sid="326233292202846" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="591435169420467" type="spr_Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="963156842874979">
+            <conditions>
+                <condition id="2" name="Key is down" sid="230716847091995" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="160546985269222" type="spr_Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="241832580344035">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="236985101861719" type="spr_Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="708323955563540" type="spr_Player">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="400775651060891">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="445361682655178" type="spr_Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="885764784499873" type="spr_Player">
+                    <param id="0" name="Animation">&quot;Fall&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="813580127781860">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="206961551901550" type="spr_Player" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="502140713705472" type="spr_Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="256896220502853" type="spr_Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="735064456723522">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="753836151997555" type="spr_Player" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="317676330738967" type="spr_Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="306774175360587" type="spr_Player">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Wall</comment>
+        <event-block sid="751111756196879">
+            <conditions>
+                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="111599376060358" type="spr_Player" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="171010900605625">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="935899467482850" type="spr_Player">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="604763702648395" type="spr_Player">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="121406588619860" type="spr_Player">
+                            <param id="0" name="Animation">&quot;WallJump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="6" name="Set max fall speed" sid="417545001996371" type="spr_Player">
+                            <param id="0" name="Max fall speed">40</param>
+                        </action>
+                        <action behavior="Platform" id="13" name="Set double-jump" sid="168618706359193" type="spr_Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="416154909359330">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="767601310347572" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="6" name="Set max fall speed" sid="899763897897619" type="spr_Player">
+                            <param id="0" name="Max fall speed">1000</param>
+                        </action>
+                        <action behavior="Platform" id="13" name="Set double-jump" sid="992026723138046" type="spr_Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
 </c2eventsheet>
