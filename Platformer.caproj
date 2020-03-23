@@ -14,11 +14,13 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Yeremia AI (lunarray)" id="rex_lunarray_Tween_mod" version="0.100000001">EaseTween Mod</behavior>
@@ -201,6 +203,62 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Boxes">
+            <object-type name="spr_Box" sid="443644182218108">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="727344549275169">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="982262404460371" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Items\Boxes\Box2\Idle.png">
+                            <collision-poly>
+                                <point x="0.178571" y="0.125" />
+                                <point x="0.821429" y="0.125" />
+                                <point x="0.821429" y="0.875" />
+                                <point x="0.178571" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="463504502667426" speed="12">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.178571" y="0.125" />
+                                <point x="0.821429" y="0.125" />
+                                <point x="0.821429" y="0.875" />
+                                <point x="0.178571" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.178571" y="0.125" />
+                                <point x="0.821429" y="0.125" />
+                                <point x="0.821429" y="0.875" />
+                                <point x="0.178571" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.178571" y="0.125" />
+                                <point x="0.821429" y="0.125" />
+                                <point x="0.821429" y="0.875" />
+                                <point x="0.178571" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.178571" y="0.125" />
+                                <point x="0.821429" y="0.125" />
+                                <point x="0.821429" y="0.875" />
+                                <point x="0.178571" y="0.875" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -594,6 +652,11 @@
         </object-type>
         <object-type name="TiledBackground" sid="620164070321763">
             <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="922566683345430">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Background\Pink.png" />
         </object-type>
         <object-type name="Function" sid="954737842827367">
@@ -638,59 +701,9 @@
         <object-type name="Mouse" sid="608837022781183">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Sprite" sid="443644182218108">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="727344549275169">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="982262404460371" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Items\Boxes\Box2\Idle.png">
-                        <collision-poly>
-                            <point x="0.178571" y="0.125" />
-                            <point x="0.821429" y="0.125" />
-                            <point x="0.821429" y="0.875" />
-                            <point x="0.178571" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="463504502667426" speed="12">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.178571" y="0.125" />
-                            <point x="0.821429" y="0.125" />
-                            <point x="0.821429" y="0.875" />
-                            <point x="0.178571" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.178571" y="0.125" />
-                            <point x="0.821429" y="0.125" />
-                            <point x="0.821429" y="0.875" />
-                            <point x="0.178571" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.178571" y="0.125" />
-                            <point x="0.821429" y="0.125" />
-                            <point x="0.821429" y="0.875" />
-                            <point x="0.178571" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.178571" y="0.125" />
-                            <point x="0.821429" y="0.125" />
-                            <point x="0.821429" y="0.875" />
-                            <point x="0.178571" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
+        <object-type name="SpriteFont" sid="223908548202251">
+            <plugin id="Spritefont2" />
+            <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Menu\Text\Text (Black) (8x10).png" />
         </object-type>
     </object-folder>
     <families />
