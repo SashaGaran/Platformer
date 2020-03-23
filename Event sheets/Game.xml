@@ -4,5 +4,42 @@
     <name>Game</name>
     <events>
         <include>Player</include>
+        <event-block sid="296730854191124">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="533161465510908" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="486750463035223">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="204616182163324" type="spr_Player">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="987992595278885" type="spr_Player">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">-10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="963933099441294" type="Sprite">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="724972931670704">
+            <conditions>
+                <condition id="4" name="On finished" sid="253981793189153" type="Sprite">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="825275815451694" type="Sprite">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
