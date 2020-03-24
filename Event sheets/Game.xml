@@ -4,6 +4,29 @@
     <name>Game</name>
     <events>
         <include>Player</include>
+        <event-block sid="853455996836077">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="282787244924225" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="628222834882360" type="Particles">
+                    <param id="0" name="Pin to">spr_FallingPlatform</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="972849954979867">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="484672197688110" type="System">
+                    <param id="0" name="Interval (seconds)">0.25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="742074229770197" type="SpriteFont">
+                    <param id="0" name="Text">&quot;FPS: &quot; &amp; fps</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="120385899521100">
             <conditions>
                 <condition id="4" name="On finished" sid="298894954936993" type="spr_Apple">
@@ -17,38 +40,6 @@
                 <action id="3" name="Start" sid="526334112619526" type="spr_Apple">
                     <param id="0" name="From">1</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="486750463035223">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="204616182163324" type="spr_Player">
-                    <param id="0" name="Object">spr_Box</param>
-                </condition>
-                <condition id="9" name="Is overlapping at offset" sid="987992595278885" type="spr_Player">
-                    <param id="0" name="Object">spr_Box</param>
-                    <param id="1" name="Offset X">0</param>
-                    <param id="2" name="Offset Y">-12</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="963933099441294" type="spr_Box">
-                    <param id="0" name="Animation">&quot;Hit&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="724972931670704">
-            <conditions>
-                <condition id="4" name="On finished" sid="253981793189153" type="spr_Box">
-                    <param id="0" name="Animation">&quot;Hit&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="825275815451694" type="spr_Box">
-                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action disabled="1" id="-9" name="Destroy" sid="977581287893293" type="spr_Box" />
             </actions>
         </event-block>
         <event-block sid="800340335525926">
@@ -74,16 +65,51 @@
                 <action id="-9" name="Destroy" sid="944448307080418" type="spr_Apple" />
             </actions>
         </event-block>
-        <event-block sid="972849954979867">
+        <event-block sid="486750463035223">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="484672197688110" type="System">
-                    <param id="0" name="Interval (seconds)">0.25</param>
+                <condition id="0" name="On collision with another object" sid="204616182163324" type="spr_Player">
+                    <param id="0" name="Object">spr_Box</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="987992595278885" type="spr_Player">
+                    <param id="0" name="Object">spr_Box</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">-10</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="742074229770197" type="SpriteFont">
-                    <param id="0" name="Text">&quot;CPU: &quot; &amp; round(cpuutilisation*10000)/100 &amp; newline &amp; &quot;FPS: &quot; &amp; fps</param>
+                <action id="4" name="Set animation" sid="963933099441294" type="spr_Box">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="724972931670704">
+            <conditions>
+                <condition id="4" name="On finished" sid="253981793189153" type="spr_Box">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="825275815451694" type="spr_Box">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="290615910716784" type="spr_Box">
+                    <param id="0" name="Instance variable">BoxHealth_MD</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="107785497481746">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="611590104879464" type="spr_Box">
+                    <param id="0" name="Instance variable">BoxHealth_MD</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="977581287893293" type="spr_Box" />
             </actions>
         </event-block>
     </events>
