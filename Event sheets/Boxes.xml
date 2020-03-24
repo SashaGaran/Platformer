@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Boxes</name>
+    <events>
+        <event-block sid="431810682374641">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="241202771992272" type="spr_Player">
+                    <param id="0" name="Object">spr_Box</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="454225275070511" type="spr_Player">
+                    <param id="0" name="Object">spr_Box</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">-10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="996097372633606" type="spr_Box">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="987200007060081">
+            <conditions>
+                <condition id="4" name="On finished" sid="771031204591060" type="spr_Box">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="167677271260051" type="spr_Box">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="286645064660124" type="spr_Box">
+                    <param id="0" name="Instance variable">BoxHealth_MD</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="862052122321947">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="489245177246759" type="spr_Box">
+                    <param id="0" name="Instance variable">BoxHealth_MD</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="122912369396708" type="spr_Box" />
+                <action id="0" name="Spawn another object" sid="961989528548264" type="spr_Box">
+                    <param id="0" name="Object">CrashBox_MD</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="234823596745545" type="CrashBox_MD">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="405441318867747" type="spr_Box">
+                    <param id="0" name="Object">CrashBox_MD</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="867191954285335" type="CrashBox_MD">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="660605051176824" type="spr_Box">
+                    <param id="0" name="Object">CrashBox_MD</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="858428616301979" type="CrashBox_MD">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="788689043945469" type="spr_Box">
+                    <param id="0" name="Object">CrashBox_MD</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="737186173267330" type="CrashBox_MD">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="978171218936149" type="CrashBox_MD">
+                    <param id="0" name="Impulse">0.3</param>
+                    <param id="1" name="Angle">random(250, 290)</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="709463735678804">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="770939313756514" type="System">
+                            <param id="0" name="Count">int(random(0, 3))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="864551310565851" type="spr_Box">
+                            <param id="0" name="Object">spr_Apple</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="314370072805024" type="spr_Apple">
+                            <param id="0" name="Impulse">0.3</param>
+                            <param id="1" name="Angle">random(250, 290)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="200777235029716" type="spr_Apple">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">int(random(0, 2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="296425705314584">
+            <conditions>
+                <condition id="-18" name="On created" sid="343851148747735" type="CrashBox_MD" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="496420164146868" type="System">
+                    <param id="0" name="Seconds">3.6</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="384024246979123" type="CrashBox_MD">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="763932979208979" type="CrashBox_MD" />
+            </actions>
+        </event-block>
+        <event-block sid="738735355716828">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="229373920125149" type="spr_Apple">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="929804141698354">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="978408062414272" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="943592105229771" type="spr_Apple">
+                            <param id="0" name="Animation">&quot;Apple&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="741736951105869">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="575155229056855" type="spr_Apple">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="235425661034494">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="230183292911755" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="530393848892313" type="spr_Apple">
+                            <param id="0" name="Animation">&quot;Kiwi&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

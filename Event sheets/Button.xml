@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Button</name>
+    <events>
+        <event-block sid="246703882105506">
+            <conditions>
+                <condition id="0" name="On clicked" sid="190071710874322" type="btn_Restart" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="646396625172515" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="156719946158865">
+            <conditions>
+                <condition id="0" name="On clicked" sid="142262565471907" type="Button" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="773439090218833" type="Text">
+                    <param id="0" name="Text">int(random(0, 1 + 1))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

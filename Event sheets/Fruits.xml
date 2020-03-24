@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fruits</name>
+    <events>
+        <event-block any="1" sid="123319482068560">
+            <conditions>
+                <condition id="4" name="On finished" sid="932865815845390" type="spr_Apple">
+                    <param id="0" name="Animation">&quot;Apple&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="346865105292528" type="spr_Apple">
+                    <param id="0" name="Animation">&quot;Kiwi&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="571264697444862" type="spr_Apple">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="508762928847043" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="3" name="Start" sid="386530069611905" type="spr_Apple">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="819140629106323">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="396773203834428" type="spr_Player">
+                    <param id="0" name="Object">spr_Apple</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="318958372600200" type="spr_Apple">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="664788539876402" type="spr_Apple">
+                    <param id="0" name="Animation">&quot;Collected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262910707208352">
+            <conditions>
+                <condition id="4" name="On finished" sid="483831239389134" type="spr_Apple">
+                    <param id="0" name="Animation">&quot;Collected&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="773375991770892" type="spr_Apple" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
