@@ -64,7 +64,7 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Fruits">
-            <object-type name="spr_Apple" sid="382656382812477">
+            <object-type name="spr_Fruits" sid="382656382812477">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Animation" sid="140617094599781" type="number" />
@@ -405,71 +405,131 @@
             </object-type>
         </object-folder>
         <object-folder name="Boxes">
-            <object-type name="spr_Box" sid="443644182218108">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="BoxHealth_MD" sid="899601929494811" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Solid" sid="727344549275169">
-                        <behavior id="solid" />
-                    </behavior-type>
-                    <behavior-type name="Physics" sid="756196895342938">
-                        <behavior id="Physics" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="982262404460371" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Items\Boxes\Box2\Idle.png">
-                            <image-point name="SpawnCrash" x="0.5" y="0" />
-                            <collision-poly>
-                                <point x="0.178571" y="0.125" />
-                                <point x="0.821429" y="0.125" />
-                                <point x="0.821429" y="0.875" />
-                                <point x="0.178571" y="0.875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="463504502667426" speed="12">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="SpawnCrash" x="0.5" y="0" />
-                            <collision-poly>
-                                <point x="0.178571" y="0.125" />
-                                <point x="0.821429" y="0.125" />
-                                <point x="0.821429" y="0.875" />
-                                <point x="0.178571" y="0.875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="SpawnCrash" x="0.5" y="0" />
-                            <collision-poly>
-                                <point x="0.178571" y="0.125" />
-                                <point x="0.821429" y="0.125" />
-                                <point x="0.821429" y="0.875" />
-                                <point x="0.178571" y="0.875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="SpawnCrash" x="0.5" y="0" />
-                            <collision-poly>
-                                <point x="0.178571" y="0.125" />
-                                <point x="0.821429" y="0.125" />
-                                <point x="0.821429" y="0.875" />
-                                <point x="0.178571" y="0.875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="SpawnCrash" x="0.5" y="0" />
-                            <collision-poly>
-                                <point x="0.178571" y="0.125" />
-                                <point x="0.821429" y="0.125" />
-                                <point x="0.821429" y="0.875" />
-                                <point x="0.178571" y="0.875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
+            <object-folder name="Box_MD">
+                <object-type name="spr_Box_MD" sid="443644182218108">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="BoxHealth_MD" sid="899601929494811" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Solid" sid="727344549275169">
+                            <behavior id="solid" />
+                        </behavior-type>
+                        <behavior-type name="Physics" sid="756196895342938">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="982262404460371" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Items\Boxes\Box2\Idle.png">
+                                <image-point name="SpawnCrash_TopLeft" x="0.25" y="0.208333" />
+                                <image-point name="SpawnCrash_TopRight" x="0.75" y="0.208333" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.25" y="0.791667" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.75" y="0.791667" />
+                                <collision-poly>
+                                    <point x="0.178571" y="0.125" />
+                                    <point x="0.821429" y="0.125" />
+                                    <point x="0.821429" y="0.875" />
+                                    <point x="0.178571" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="463504502667426" speed="12">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
+                                <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <collision-poly>
+                                    <point x="0.178571" y="0.125" />
+                                    <point x="0.821429" y="0.125" />
+                                    <point x="0.821429" y="0.875" />
+                                    <point x="0.178571" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrash" x="0.5" y="0" />
+                                <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
+                                <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <collision-poly>
+                                    <point x="0.178571" y="0.125" />
+                                    <point x="0.821429" y="0.125" />
+                                    <point x="0.821429" y="0.875" />
+                                    <point x="0.178571" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrash" x="0.5" y="0" />
+                                <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
+                                <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <collision-poly>
+                                    <point x="0.178571" y="0.125" />
+                                    <point x="0.821429" y="0.125" />
+                                    <point x="0.821429" y="0.875" />
+                                    <point x="0.178571" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrash" x="0.5" y="0" />
+                                <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
+                                <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <collision-poly>
+                                    <point x="0.178571" y="0.125" />
+                                    <point x="0.821429" y="0.125" />
+                                    <point x="0.821429" y="0.875" />
+                                    <point x="0.178571" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="spr_CrashBox_MD" sid="152726229857187">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="830821941497898">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                        <behavior-type name="EaseTweenMod" sid="586338333475276">
+                            <behavior id="rex_lunarray_Tween_mod" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671232529206369" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.357143" y="0.375" />
+                                    <point x="0.642857" y="0.375" />
+                                    <point x="0.642857" y="0.625" />
+                                    <point x="0.357143" y="0.625" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.321429" y="0.333333" />
+                                    <point x="0.607143" y="0.333333" />
+                                    <point x="0.607143" y="0.708333" />
+                                    <point x="0.392857" y="0.708333" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.357143" y="0.291667" />
+                                    <point x="0.571429" y="0.375" />
+                                    <point x="0.642857" y="0.708333" />
+                                    <point x="0.357143" y="0.708333" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.392857" y="0.375" />
+                                    <point x="0.607143" y="0.333333" />
+                                    <point x="0.607143" y="0.625" />
+                                    <point x="0.321429" y="0.625" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Box_SM" />
         </object-folder>
         <object-folder name="Traps">
             <object-folder name="FallingPlatform">
@@ -479,14 +539,14 @@
                         <behavior-type name="EaseTweenMod" sid="309155947161720">
                             <behavior id="rex_lunarray_Tween_mod" />
                         </behavior-type>
-                        <behavior-type name="EaseTweenMod2" sid="819731262979333">
-                            <behavior id="rex_lunarray_Tween_mod" />
-                        </behavior-type>
                         <behavior-type name="Jumpthru" sid="447492105178632">
                             <behavior id="jumpthru" />
                         </behavior-type>
                         <behavior-type name="Physics" sid="503922486571452">
                             <behavior id="Physics" />
+                        </behavior-type>
+                        <behavior-type name="Flying" sid="275031630264367">
+                            <behavior id="rex_lunarray_Tween_mod" />
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
@@ -968,7 +1028,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="7" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="724682172791955" speed="12">
+                <animation framecount="7" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="724682172791955" speed="24">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.21875" y="0.21875" />
@@ -1081,50 +1141,6 @@
             </behaviors>
             <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Other\Dust Particle.png" />
         </object-type>
-        <object-type name="CrashBox_MD" sid="152726229857187">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Physics" sid="830821941497898">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671232529206369" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.357143" y="0.375" />
-                            <point x="0.642857" y="0.375" />
-                            <point x="0.642857" y="0.625" />
-                            <point x="0.357143" y="0.625" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.321429" y="0.333333" />
-                            <point x="0.607143" y="0.333333" />
-                            <point x="0.607143" y="0.708333" />
-                            <point x="0.392857" y="0.708333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.357143" y="0.291667" />
-                            <point x="0.571429" y="0.375" />
-                            <point x="0.642857" y="0.708333" />
-                            <point x="0.357143" y="0.708333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.392857" y="0.375" />
-                            <point x="0.607143" y="0.333333" />
-                            <point x="0.607143" y="0.625" />
-                            <point x="0.321429" y="0.625" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type global="1" name="Import" sid="560648810483524">
             <plugin id="mck_import" />
         </object-type>
@@ -1136,6 +1152,72 @@
         </object-type>
         <object-type name="Button" sid="892253076465771">
             <plugin id="Button" />
+        </object-type>
+        <object-type name="Sprite2" sid="423134411766393">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="433996968323099">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="113716003679810">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="662757449627845" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Items\Boxes\Box1\Idle.png">
+                        <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
+                        <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
+                        <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
+                        <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
+                        <collision-poly>
+                            <point x="0.178571" y="0.125" />
+                            <point x="0.821429" y="0.125" />
+                            <point x="0.821429" y="0.875" />
+                            <point x="0.178571" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="701444618987672" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.178571" y="0.125" />
+                            <point x="0.821429" y="0.125" />
+                            <point x="0.821429" y="0.875" />
+                            <point x="0.178571" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.178571" y="0.125" />
+                            <point x="0.821429" y="0.125" />
+                            <point x="0.821429" y="0.875" />
+                            <point x="0.178571" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.178571" y="0.125" />
+                            <point x="0.821429" y="0.125" />
+                            <point x="0.821429" y="0.875" />
+                            <point x="0.178571" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AnimationMultimetr" sid="362128100945088">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="EaseTweenMod" sid="844001114146651">
+                    <behavior id="rex_lunarray_Tween_mod" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="635815857461811" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

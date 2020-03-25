@@ -14,10 +14,10 @@
             <actions>
                 <action behavior="Pin" id="0" name="Pin to object" sid="628222834882360" type="Particles">
                     <param id="0" name="Pin to">spr_FallingPlatform</param>
-                    <param id="1" name="Mode">1</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Physics" id="14" name="Set stepping iterations" sid="183103497913520" type="spr_Apple">
-                    <param id="0" name="Velocity iterations">6</param>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="183103497913520" type="spr_Fruits">
+                    <param id="0" name="Velocity iterations">5</param>
                     <param id="1" name="Position iterations">2</param>
                 </action>
                 <action id="0" name="Import file" sid="295571986407345" type="Import">
@@ -37,6 +37,72 @@
             <actions>
                 <action id="0" name="Set text" sid="742074229770197" type="SpriteFont">
                     <param id="0" name="Text">&quot;FPS: &quot; &amp; fps</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="608099460537446">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="785765901949663" type="spr_Player">
+                    <param id="0" name="Object">spr_FallingPlatform</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="324854368998036" type="System">
+                    <param id="0" name="First value">spr_Player.Y</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">spr_FallingPlatform.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-28" name="Set effect parameter" sid="847773751462388" type="Multimetr">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="358831165749399" type="Multimetr">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">1</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="574662114278548" type="Multimetr">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">2</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="463124565958973">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="827945328179653" type="spr_Player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="902486277428891" type="spr_Player" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="514214245038790">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="317594725079818" type="System">
+                    <param id="0" name="First value">spr_Player.Y</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">spr_FallingPlatform.Y</param>
+                </condition>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="521044918685397" type="spr_Player" />
+                <condition behavior="Platform" id="4" name="Is falling" sid="861636285279175" type="spr_Player" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set effect parameter" sid="268691141341382" type="Multimetr">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="836765846851179" type="Multimetr">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">1</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="580341809288888" type="Multimetr">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">2</param>
+                    <param id="2" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

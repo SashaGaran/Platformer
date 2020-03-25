@@ -15,11 +15,7 @@
             <conditions>
                 <condition id="0" name="On clicked" sid="142262565471907" type="Button" />
             </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="773439090218833" type="Text">
-                    <param id="0" name="Text">int(random(0, 1 + 1))</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

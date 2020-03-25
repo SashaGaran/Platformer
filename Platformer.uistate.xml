@@ -27,7 +27,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Fruits/" />
-        <folder expanded="0" path="object-folder/Boxes/" />
+        <folder expanded="1" path="object-folder/Boxes/" />
+        <folder expanded="1" path="object-folder/Boxes/Box_MD/" />
+        <folder expanded="1" path="object-folder/Boxes/Box_SM/" />
         <folder expanded="0" path="object-folder/Traps/" />
         <folder expanded="1" path="object-folder/Traps/FallingPlatform/" />
         <folder expanded="1" path="object-folder/Traps/Saw/" />
@@ -39,13 +41,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/spr_Apple/" />
-        <folder expanded="1" path="animation-folder/spr_Box/" />
+        <folder expanded="1" path="animation-folder/spr_Fruits/" />
+        <folder expanded="1" path="animation-folder/spr_Box_MD/" />
+        <folder expanded="1" path="animation-folder/spr_CrashBox_MD/" />
         <folder expanded="1" path="animation-folder/spr_FallingPlatform/" />
         <folder expanded="1" path="animation-folder/spr_Saw/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/spr_Player/" />
         <folder expanded="1" path="animation-folder/Multimetr/" />
-        <folder expanded="1" path="animation-folder/CrashBox_MD/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/AnimationMultimetr/" />
     </folders-expanded>
 </c2uistate>
