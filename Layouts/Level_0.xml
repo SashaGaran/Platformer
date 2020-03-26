@@ -484,23 +484,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="EaseTweenMod">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>EaseInOutQuad</function>
-                                <initial>current</initial>
-                                <target>0, -120</target>
-                                <duration>4</duration>
-                                <wait>3</wait>
-                                <playback-mode>Ping Pong</playback-mode>
-                                <value>0</value>
-                                <coordinate-mode>Relative</coordinate-mode>
-                                <force-initial-on-start>No</force-initial-on-start>
-                                <tween-group></tween-group>
-                                <repeat-count>0</repeat-count>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -508,7 +491,7 @@
                         </behavior-instance>
                         <behavior-instance type="Physics">
                             <properties>
-                                <immovable>No</immovable>
+                                <immovable>Yes</immovable>
                                 <collision-mask>Use collision polygon</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
@@ -524,11 +507,11 @@
                             <properties>
                                 <active-on-start>Yes</active-on-start>
                                 <tweened-property>Position</tweened-property>
-                                <function>EaseInOutCircle</function>
+                                <function>EaseInOutSmoothstep</function>
                                 <initial>current</initial>
-                                <target>0, -8</target>
-                                <duration>0.5</duration>
-                                <wait>0,0</wait>
+                                <target>0, -6</target>
+                                <duration>0.8</duration>
+                                <wait>0.08</wait>
                                 <playback-mode>Ping Pong</playback-mode>
                                 <value>0</value>
                                 <coordinate-mode>Relative</coordinate-mode>
@@ -597,6 +580,61 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="spr_CrashBox_SM" uid="34">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ease_Opacity">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <tweened-property>Opacity</tweened-property>
+                                <function>EaseOutCircle</function>
+                                <initial>current</initial>
+                                <target>0</target>
+                                <duration>1.2</duration>
+                                <wait>2.2</wait>
+                                <playback-mode>Play Once</playback-mode>
+                                <value>0</value>
+                                <coordinate-mode>Absolute</coordinate-mode>
+                                <force-initial-on-start>No</force-initial-on-start>
+                                <tween-group></tween-group>
+                                <repeat-count>0</repeat-count>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-85</x>
+                        <y>293</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="spr_CrashBox_MD" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -619,7 +657,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="EaseTweenMod">
+                        <behavior-instance type="ease_Opacity">
                             <properties>
                                 <active-on-start>Yes</active-on-start>
                                 <tweened-property>Opacity</tweened-property>
@@ -640,11 +678,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-140</x>
-                        <y>234</y>
+                        <x>-64</x>
+                        <y>292</y>
                         <z>0</z>
                         <width>28</width>
                         <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Plant" uid="35">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>506</x>
+                        <y>283</y>
+                        <z>0</z>
+                        <width>44</width>
+                        <height>42</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -659,6 +719,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <FruitsCount>0</FruitsCount>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -744,7 +807,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>475</x>
-                        <y>223</y>
+                        <y>222</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -785,7 +848,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>515</x>
-                        <y>223</y>
+                        <y>222</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -826,7 +889,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>495</x>
-                        <y>223</y>
+                        <y>222</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -867,7 +930,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>455</x>
-                        <y>223</y>
+                        <y>222</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -878,13 +941,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite2" uid="31">
+                <instance type="spr_Box_SM" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <BoxHealth_SM>1</BoxHealth_SM>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
                             <properties>
@@ -1234,8 +1300,8 @@
                         <x>8</x>
                         <y>9</y>
                         <z>0</z>
-                        <width>75</width>
-                        <height>108</height>
+                        <width>109</width>
+                        <height>130</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1261,8 +1327,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>45.5</x>
-                        <y>46</y>
+                        <x>62.5</x>
+                        <y>56</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -1288,9 +1354,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>13</x>
-                        <y>60</y>
+                        <y>82</y>
                         <z>0</z>
-                        <width>63</width>
+                        <width>99</width>
                         <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1300,7 +1366,7 @@
                 <instance type="Text" uid="18">
                     <properties>
                         <text>For Developer</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-14.4,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -1315,7 +1381,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>95</x>
+                        <x>129</x>
                         <y>12</y>
                         <z>0</z>
                         <width>219</width>
@@ -1342,9 +1408,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>13</x>
-                        <y>86</y>
+                        <y>108</y>
                         <z>0</z>
-                        <width>63</width>
+                        <width>99</width>
                         <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1353,7 +1419,7 @@
                 </instance>
                 <instance type="AnimationMultimetr" uid="32">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1363,12 +1429,12 @@
                             <properties>
                                 <active-on-start>Yes</active-on-start>
                                 <tweened-property>Position</tweened-property>
-                                <function>EaseInOutCircle</function>
+                                <function>EaseInOutSmoothstep</function>
                                 <initial>current</initial>
                                 <target>100, 0</target>
                                 <duration>0.5</duration>
-                                <wait>0</wait>
-                                <playback-mode>Ping Pong</playback-mode>
+                                <wait>0.5</wait>
+                                <playback-mode>Play Once</playback-mode>
                                 <value>0</value>
                                 <coordinate-mode>Relative</coordinate-mode>
                                 <force-initial-on-start>No</force-initial-on-start>
@@ -1380,7 +1446,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>99</x>
+                        <x>133</x>
                         <y>51</y>
                         <z>0</z>
                         <width>8</width>
@@ -1397,11 +1463,11 @@
                         <character-width>8</character-width>
                         <character-height>10</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ    0123456789.,:?!()+-</character-set>
-                        <text>FPS:   </text>
+                        <text>FRUITS:</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
@@ -1413,7 +1479,7 @@
                         <x>13</x>
                         <y>16</y>
                         <z>0</z>
-                        <width>65</width>
+                        <width>99</width>
                         <height>19</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1430,6 +1496,13 @@
         <instance type="Import" uid="22">
             <properties>
                 <auto-import></auto-import>
+            </properties>
+        </instance>
+        <instance type="Array" uid="33">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
             </properties>
         </instance>
     </nonworld-instances>

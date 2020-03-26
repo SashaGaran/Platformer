@@ -3,13 +3,32 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Fruits</name>
     <events>
+        <comment>Animation</comment>
         <event-block any="1" sid="123319482068560">
             <conditions>
                 <condition id="4" name="On finished" sid="932865815845390" type="spr_Fruits">
                     <param id="0" name="Animation">&quot;Apple&quot;</param>
                 </condition>
                 <condition id="4" name="On finished" sid="346865105292528" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Bananas&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="366962495456049" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Cherries&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="278002013300704" type="spr_Fruits">
                     <param id="0" name="Animation">&quot;Kiwi&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="821008488834211" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Melon&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="619313509020781" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Orange&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="220874279250954" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Pineapple&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="313196519960743" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Strawberry&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -22,32 +41,6 @@
                 <action id="3" name="Start" sid="386530069611905" type="spr_Fruits">
                     <param id="0" name="From">1</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="819140629106323">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="396773203834428" type="spr_Player">
-                    <param id="0" name="Object">spr_Fruits</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="27" name="Set enabled" sid="318958372600200" type="spr_Fruits">
-                    <param id="0" name="Mode">0</param>
-                </action>
-                <action id="4" name="Set animation" sid="664788539876402" type="spr_Fruits">
-                    <param id="0" name="Animation">&quot;Collected&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="262910707208352">
-            <conditions>
-                <condition id="4" name="On finished" sid="483831239389134" type="spr_Fruits">
-                    <param id="0" name="Animation">&quot;Collected&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="773375991770892" type="spr_Fruits" />
             </actions>
         </event-block>
         <event-block sid="925915616344149">
@@ -89,12 +82,207 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="852502307680006" type="spr_Fruits">
+                            <param id="0" name="Animation">&quot;Bananas&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="116444642188290">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="192999702260342" type="spr_Fruits">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="941638899182208">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="991344170288292" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="939130928966760" type="spr_Fruits">
+                            <param id="0" name="Animation">&quot;Cherries&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="857663420599275">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="244047721906702" type="spr_Fruits">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="817525057074583">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="995764548103094" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="208177742355346" type="spr_Fruits">
                             <param id="0" name="Animation">&quot;Kiwi&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="803975861154861">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="379930596639266" type="spr_Fruits">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="267877392810378">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="509123935048434" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="475441064617546" type="spr_Fruits">
+                            <param id="0" name="Animation">&quot;Melon&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="621222635202138">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="646260100893019" type="spr_Fruits">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="378379226406992">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="164688273513276" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="868288154904073" type="spr_Fruits">
+                            <param id="0" name="Animation">&quot;Orange&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="702004177713801">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="546840128698785" type="spr_Fruits">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="222483118807254">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="961901525762122" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="212849923177647" type="spr_Fruits">
+                            <param id="0" name="Animation">&quot;Pineapple&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="322818814400744">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="941334168503340" type="spr_Fruits">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="606724696899587">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="396056572843759" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="823441879950001" type="spr_Fruits">
+                            <param id="0" name="Animation">&quot;Pineapple&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="414269324686895">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="535793402480874" type="spr_Fruits">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="669864774062014">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="609038370564127" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="998715960147786" type="spr_Fruits">
+                            <param id="0" name="Animation">&quot;Strawberry&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Base</comment>
+        <event-block sid="819140629106323">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="396773203834428" type="spr_Player">
+                    <param id="0" name="Object">spr_Fruits</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="318958372600200" type="spr_Fruits">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="263996560079934" type="spr_Player">
+                    <param id="0" name="Instance variable">FruitsCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="664788539876402" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Collected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="715352621149188" type="SpriteFont">
+                    <param id="0" name="Text">&quot;FRUITS: &quot; &amp; spr_Player.FruitsCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262910707208352">
+            <conditions>
+                <condition id="4" name="On finished" sid="483831239389134" type="spr_Fruits">
+                    <param id="0" name="Animation">&quot;Collected&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="773375991770892" type="spr_Fruits" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
