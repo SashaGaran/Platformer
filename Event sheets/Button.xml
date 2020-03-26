@@ -13,7 +13,7 @@
         </event-block>
         <event-block sid="156719946158865">
             <conditions>
-                <condition id="0" name="On clicked" sid="142262565471907" type="Button" />
+                <condition id="0" name="On clicked" sid="142262565471907" type="ButtonDeveloper" />
             </conditions>
             <actions />
         </event-block>

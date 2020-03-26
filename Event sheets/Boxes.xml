@@ -3,164 +3,192 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Boxes</name>
     <events>
-        <comment>Box MD</comment>
-        <event-block any="1" sid="431810682374641">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="241202771992272" type="spr_Player">
-                    <param id="0" name="Object">spr_Box_MD</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="757119942923393" title="Box_MD">
             <sub-events>
-                <event-block sid="684384303515974">
+                <event-block sid="723691112596797">
                     <conditions>
-                        <condition id="9" name="Is overlapping at offset" sid="454225275070511" type="spr_Player">
-                            <param id="0" name="Object">spr_Box_MD</param>
-                            <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">-10</param>
+                        <condition id="0" name="On function" sid="170546923970877" type="Function">
+                            <param id="0" name="Name">&quot;Hit_Box_MD&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="995485412323928" type="spr_Box_MD">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="996097372633606" type="spr_Box_MD">
+                        <action id="4" name="Set animation" sid="422079502717103" type="spr_Box_MD">
                             <param id="0" name="Animation">&quot;Hit&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="987200007060081">
-            <conditions>
-                <condition id="4" name="On finished" sid="771031204591060" type="spr_Box_MD">
-                    <param id="0" name="Animation">&quot;Hit&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="167677271260051" type="spr_Box_MD">
-                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-12" name="Subtract from" sid="286645064660124" type="spr_Box_MD">
-                    <param id="0" name="Instance variable">BoxHealth_MD</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="862052122321947">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="489245177246759" type="spr_Box_MD">
-                    <param id="0" name="Instance variable">BoxHealth_MD</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="122912369396708" type="spr_Box_MD" />
-                <action id="0" name="Spawn another object" sid="961989528548264" type="spr_Box_MD">
-                    <param id="0" name="Object">spr_CrashBox_MD</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="234823596745545" type="spr_CrashBox_MD">
-                    <param id="0" name="Frame number">0</param>
-                </action>
-                <action id="-8" name="Set angle" sid="274173524751945" type="spr_CrashBox_MD">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="405441318867747" type="spr_Box_MD">
-                    <param id="0" name="Object">spr_CrashBox_MD</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">2</param>
-                </action>
-                <action id="5" name="Set frame" sid="867191954285335" type="spr_CrashBox_MD">
-                    <param id="0" name="Frame number">1</param>
-                </action>
-                <action id="-8" name="Set angle" sid="394706583312119" type="spr_CrashBox_MD">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="660605051176824" type="spr_Box_MD">
-                    <param id="0" name="Object">spr_CrashBox_MD</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">3</param>
-                </action>
-                <action id="5" name="Set frame" sid="858428616301979" type="spr_CrashBox_MD">
-                    <param id="0" name="Frame number">2</param>
-                </action>
-                <action id="-8" name="Set angle" sid="480443417108934" type="spr_CrashBox_MD">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="788689043945469" type="spr_Box_MD">
-                    <param id="0" name="Object">spr_CrashBox_MD</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">4</param>
-                </action>
-                <action id="5" name="Set frame" sid="737186173267330" type="spr_CrashBox_MD">
-                    <param id="0" name="Frame number">3</param>
-                </action>
-                <action id="-8" name="Set angle" sid="299600414010178" type="spr_CrashBox_MD">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="978171218936149" type="spr_CrashBox_MD">
-                    <param id="0" name="Impulse">0.16</param>
-                    <param id="1" name="Angle">random(250, 290)</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="709463735678804">
+                <event-block sid="987200007060081">
                     <conditions>
-                        <condition id="-12" name="Repeat" sid="770939313756514" type="System">
-                            <param id="0" name="Count">int(random(0, 2 + 1))</param>
+                        <condition id="4" name="On finished" sid="771031204591060" type="spr_Box_MD">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="864551310565851" type="spr_Box_MD">
-                            <param id="0" name="Object">spr_Fruits</param>
+                        <action id="4" name="Set animation" sid="167677271260051" type="spr_Box_MD">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="286645064660124" type="spr_Box_MD">
+                            <param id="0" name="Instance variable">BoxHealth_MD</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="862052122321947">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="489245177246759" type="spr_Box_MD">
+                            <param id="0" name="Instance variable">BoxHealth_MD</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="122912369396708" type="spr_Box_MD" />
+                        <action id="0" name="Spawn another object" sid="961989528548264" type="spr_Box_MD">
+                            <param id="0" name="Object">spr_CrashBox_MD</param>
                             <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="234823596745545" type="spr_CrashBox_MD">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="274173524751945" type="spr_CrashBox_MD">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="978171218936149" type="spr_CrashBox_MD">
+                            <param id="0" name="Impulse">0.08</param>
+                            <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="200777235029716" type="spr_Fruits">
-                            <param id="0" name="Instance variable">Animation</param>
-                            <param id="1" name="Value">int(random(0, 8 + 1))</param>
+                        <action id="0" name="Spawn another object" sid="405441318867747" type="spr_Box_MD">
+                            <param id="0" name="Object">spr_CrashBox_MD</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">2</param>
                         </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="314370072805024" type="spr_Fruits">
-                            <param id="0" name="Impulse">0.3</param>
+                        <action id="5" name="Set frame" sid="867191954285335" type="spr_CrashBox_MD">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="394706583312119" type="spr_CrashBox_MD">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="426740973305721" type="spr_CrashBox_MD">
+                            <param id="0" name="Impulse">0.08</param>
+                            <param id="1" name="Angle">random(250, 290)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="660605051176824" type="spr_Box_MD">
+                            <param id="0" name="Object">spr_CrashBox_MD</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="858428616301979" type="spr_CrashBox_MD">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="480443417108934" type="spr_CrashBox_MD">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="985539735101043" type="spr_CrashBox_MD">
+                            <param id="0" name="Impulse">0.08</param>
+                            <param id="1" name="Angle">random(250, 290)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="788689043945469" type="spr_Box_MD">
+                            <param id="0" name="Object">spr_CrashBox_MD</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="737186173267330" type="spr_CrashBox_MD">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="299600414010178" type="spr_CrashBox_MD">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="912820471102240" type="spr_CrashBox_MD">
+                            <param id="0" name="Impulse">0.08</param>
                             <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="709463735678804">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="770939313756514" type="System">
+                                    <param id="0" name="Count">int(random(0, 2 + 1))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="864551310565851" type="spr_Box_MD">
+                                    <param id="0" name="Object">spr_Fruits</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="200777235029716" type="spr_Fruits">
+                                    <param id="0" name="Instance variable">Animation</param>
+                                    <param id="1" name="Value">int(random(0, 8 + 1))</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="314370072805024" type="spr_Fruits">
+                                    <param id="0" name="Impulse">0.3</param>
+                                    <param id="1" name="Angle">random(250, 290)</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="296425705314584">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="343851148747735" type="spr_CrashBox_MD" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="496420164146868" type="System">
+                            <param id="0" name="Seconds">3.4</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="384024246979123" type="spr_CrashBox_MD">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="763932979208979" type="spr_CrashBox_MD" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="431810682374641">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="241202771992272" type="spr_Player">
+                            <param id="0" name="Object">spr_Box_MD</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="684384303515974">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="454225275070511" type="spr_Player">
+                                    <param id="0" name="Object">spr_Box_MD</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">-10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="790834808025712" type="Function">
+                                    <param id="0" name="Name">&quot;Hit_Box_MD&quot;</param>
+                                    <param id="1" name="Parameter {n}">spr_Box_MD.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="296425705314584">
-            <conditions>
-                <condition id="-18" name="On created" sid="343851148747735" type="spr_CrashBox_MD" />
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="496420164146868" type="System">
-                    <param id="0" name="Seconds">3.4</param>
-                </action>
-                <action behavior="Physics" id="27" name="Set enabled" sid="384024246979123" type="spr_CrashBox_MD">
-                    <param id="0" name="Mode">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="763932979208979" type="spr_CrashBox_MD" />
-            </actions>
-        </event-block>
-        <comment>Box MD</comment>
-        <event-block any="1" sid="132948935331496">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="920947721114400" type="spr_Player">
-                    <param id="0" name="Object">spr_Box_SM</param>
-                </condition>
-            </conditions>
-            <actions />
+        </event-group>
+        <event-group description="" sid="111931794661969" title="Box_SM">
             <sub-events>
-                <event-block sid="558150407645846">
+                <event-block sid="230131559298360">
                     <conditions>
-                        <condition id="9" name="Is overlapping at offset" sid="608331143603692" type="spr_Player">
-                            <param id="0" name="Object">spr_Box_SM</param>
-                            <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">10</param>
+                        <condition id="0" name="On function" sid="729291777700770" type="Function">
+                            <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="659812245228689" type="spr_Box_MD">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -170,124 +198,149 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="798786914434749">
-            <conditions>
-                <condition id="4" name="On finished" sid="665034212346087" type="spr_Box_SM">
-                    <param id="0" name="Animation">&quot;Hit&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="516394926862101" type="spr_Box_SM">
-                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-12" name="Subtract from" sid="104992032730211" type="spr_Box_SM">
-                    <param id="0" name="Instance variable">BoxHealth_SM</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="796368893327130">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="603294034825768" type="spr_Box_SM">
-                    <param id="0" name="Instance variable">BoxHealth_SM</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="782828688696492" type="spr_Box_SM" />
-                <action id="0" name="Spawn another object" sid="886559784327519" type="spr_Box_SM">
-                    <param id="0" name="Object">spr_CrashBox_SM</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="454211470916904" type="spr_CrashBox_SM">
-                    <param id="0" name="Frame number">0</param>
-                </action>
-                <action id="-8" name="Set angle" sid="609886882767289" type="spr_CrashBox_SM">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="279028392443833" type="spr_Box_SM">
-                    <param id="0" name="Object">spr_CrashBox_SM</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">2</param>
-                </action>
-                <action id="5" name="Set frame" sid="104883432781733" type="spr_CrashBox_SM">
-                    <param id="0" name="Frame number">1</param>
-                </action>
-                <action id="-8" name="Set angle" sid="778773358939814" type="spr_CrashBox_SM">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="784421391254295" type="spr_Box_SM">
-                    <param id="0" name="Object">spr_CrashBox_SM</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">3</param>
-                </action>
-                <action id="5" name="Set frame" sid="483667359080119" type="spr_CrashBox_SM">
-                    <param id="0" name="Frame number">2</param>
-                </action>
-                <action id="-8" name="Set angle" sid="598192366516981" type="spr_CrashBox_SM">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="548397125561035" type="spr_Box_SM">
-                    <param id="0" name="Object">spr_CrashBox_SM</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">4</param>
-                </action>
-                <action id="5" name="Set frame" sid="646490983464748" type="spr_CrashBox_SM">
-                    <param id="0" name="Frame number">3</param>
-                </action>
-                <action id="-8" name="Set angle" sid="340049389414965" type="spr_CrashBox_SM">
-                    <param id="0" name="Angle">random(0, 360)</param>
-                </action>
-                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="453438829142481" type="spr_CrashBox_SM">
-                    <param id="0" name="Impulse">0.16</param>
-                    <param id="1" name="Angle">random(250, 290)</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="874109646815795">
+                <event-block sid="798786914434749">
                     <conditions>
-                        <condition id="-12" name="Repeat" sid="102246766685732" type="System">
-                            <param id="0" name="Count">int(random(0, 1 + 1))</param>
+                        <condition id="4" name="On finished" sid="665034212346087" type="spr_Box_SM">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="532260868343467" type="spr_Box_SM">
-                            <param id="0" name="Object">spr_Fruits</param>
+                        <action id="4" name="Set animation" sid="516394926862101" type="spr_Box_SM">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="104992032730211" type="spr_Box_SM">
+                            <param id="0" name="Instance variable">BoxHealth_SM</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="796368893327130">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="603294034825768" type="spr_Box_SM">
+                            <param id="0" name="Instance variable">BoxHealth_SM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="782828688696492" type="spr_Box_SM" />
+                        <action id="0" name="Spawn another object" sid="886559784327519" type="spr_Box_SM">
+                            <param id="0" name="Object">spr_CrashBox_SM</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="470627717074127" type="spr_Fruits">
-                            <param id="0" name="Instance variable">Animation</param>
-                            <param id="1" name="Value">int(random(0, 8 + 1))</param>
+                        <action id="5" name="Set frame" sid="454211470916904" type="spr_CrashBox_SM">
+                            <param id="0" name="Frame number">0</param>
                         </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="941562543765852" type="spr_Fruits">
-                            <param id="0" name="Impulse">0.3</param>
+                        <action id="-8" name="Set angle" sid="609886882767289" type="spr_CrashBox_SM">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="279028392443833" type="spr_Box_SM">
+                            <param id="0" name="Object">spr_CrashBox_SM</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="104883432781733" type="spr_CrashBox_SM">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="778773358939814" type="spr_CrashBox_SM">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="784421391254295" type="spr_Box_SM">
+                            <param id="0" name="Object">spr_CrashBox_SM</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="483667359080119" type="spr_CrashBox_SM">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="598192366516981" type="spr_CrashBox_SM">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="548397125561035" type="spr_Box_SM">
+                            <param id="0" name="Object">spr_CrashBox_SM</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="646490983464748" type="spr_CrashBox_SM">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="340049389414965" type="spr_CrashBox_SM">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="453438829142481" type="spr_CrashBox_SM">
+                            <param id="0" name="Impulse">0.16</param>
                             <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="874109646815795">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="102246766685732" type="System">
+                                    <param id="0" name="Count">int(random(0, 1 + 1))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="532260868343467" type="spr_Box_SM">
+                                    <param id="0" name="Object">spr_Fruits</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="470627717074127" type="spr_Fruits">
+                                    <param id="0" name="Instance variable">Animation</param>
+                                    <param id="1" name="Value">int(random(0, 8 + 1))</param>
+                                </action>
+                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="941562543765852" type="spr_Fruits">
+                                    <param id="0" name="Impulse">0.3</param>
+                                    <param id="1" name="Angle">random(250, 290)</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="119405485455622">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="672415172984715" type="spr_CrashBox_SM" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="637700929825028" type="System">
+                            <param id="0" name="Seconds">3.4</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="343887677834280" type="spr_CrashBox_SM">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="380422122783234" type="spr_CrashBox_SM" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="132948935331496">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="920947721114400" type="spr_Player">
+                            <param id="0" name="Object">spr_Box_SM</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="558150407645846">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="608331143603692" type="spr_Player">
+                                    <param id="0" name="Object">spr_Box_SM</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="259570093865764" type="Function">
+                                    <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
+                                    <param id="1" name="Parameter {n}">spr_Box_MD.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="119405485455622">
-            <conditions>
-                <condition id="-18" name="On created" sid="672415172984715" type="spr_CrashBox_SM" />
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="637700929825028" type="System">
-                    <param id="0" name="Seconds">3.4</param>
-                </action>
-                <action behavior="Physics" id="27" name="Set enabled" sid="343887677834280" type="spr_CrashBox_SM">
-                    <param id="0" name="Mode">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="380422122783234" type="spr_CrashBox_SM" />
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -13,19 +13,19 @@
                 <condition id="-2" name="On start of layout" sid="282787244924225" type="System" />
             </conditions>
             <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="628222834882360" type="Particles">
-                    <param id="0" name="Pin to">spr_FallingPlatform</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Physics" id="14" name="Set stepping iterations" sid="183103497913520" type="spr_Fruits">
-                    <param id="0" name="Velocity iterations">4</param>
-                    <param id="1" name="Position iterations">2</param>
-                </action>
                 <action id="0" name="Import file" sid="295571986407345" type="Import">
                     <param id="0" name="Import file">&quot;MyStyle.css&quot;</param>
                 </action>
                 <action id="0" name="Import file" sid="187242431914079" type="Import">
                     <param id="0" name="Import file">&quot;MyScript.js&quot;</param>
+                </action>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="183103497913520" type="spr_Fruits">
+                    <param id="0" name="Velocity iterations">4</param>
+                    <param id="1" name="Position iterations">2</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="628222834882360" type="DustParticle">
+                    <param id="0" name="Pin to">spr_FallingPlatform</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
                 <action id="0" name="Set text" sid="218281375204940" type="SpriteFont">
                     <param id="0" name="Text">&quot;FRUITS: &quot; &amp; spr_Player.FruitsCount</param>

@@ -4,10 +4,13 @@
     <name>Player</name>
     <events>
         <comment>Basic</comment>
-        <event-block sid="566399919168753">
+        <event-block any="1" sid="566399919168753">
             <conditions>
                 <condition id="2" name="Key is down" sid="326233292202846" type="Keyboard">
                     <param id="0" name="Key">37</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="259927580020111" type="Keyboard">
+                    <param id="0" name="Key">65</param>
                 </condition>
             </conditions>
             <actions>
@@ -16,10 +19,13 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="963156842874979">
+        <event-block any="1" sid="963156842874979">
             <conditions>
                 <condition id="2" name="Key is down" sid="230716847091995" type="Keyboard">
                     <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="310711950251819" type="Keyboard">
+                    <param id="0" name="Key">68</param>
                 </condition>
             </conditions>
             <actions>
@@ -139,6 +145,43 @@
             <actions>
                 <action id="7" name="Set mirrored" sid="576209331323377" type="spr_Player">
                     <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>WASD Controls</comment>
+        <event-block sid="944346915883122">
+            <conditions>
+                <condition id="2" name="Key is down" sid="479920097363008" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="208943713556659" type="spr_Player">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="120842392921764">
+            <conditions>
+                <condition id="2" name="Key is down" sid="482651416924334" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="553681673634752" type="spr_Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="314381093842015">
+            <conditions>
+                <condition id="2" name="Key is down" sid="576314293302325" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="625005773435332" type="spr_Player">
+                    <param id="0" name="Control">1</param>
                 </action>
             </actions>
         </event-block>
