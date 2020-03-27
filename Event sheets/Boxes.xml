@@ -3,6 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Boxes</name>
     <events>
+        <event-block sid="549740159819450">
+            <conditions>
+                <condition id="0" name="On function" sid="935062631655711" type="Function">
+                    <param id="0" name="Name">&quot;Choose_FruitAnimation&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="674054729708649" type="spr_Fruits">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="507365853547490" type="spr_Fruits">
+                    <param id="0" name="Animation">choose(&quot;Apple&quot;, &quot;Bananas&quot;, &quot;Cherries&quot;, &quot;Kiwi&quot;, &quot;Melon&quot;, &quot;Orange&quot;, &quot;Pineapple&quot;, &quot;Strawberry&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="757119942923393" title="Box_MD">
             <sub-events>
                 <event-block sid="723691112596797">
@@ -126,9 +142,9 @@
                                     <param id="1" name="Layer">1</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="200777235029716" type="spr_Fruits">
-                                    <param id="0" name="Instance variable">Animation</param>
-                                    <param id="1" name="Value">int(random(0, 8 + 1))</param>
+                                <action id="0" name="Call function" sid="432289495961281" type="Function">
+                                    <param id="0" name="Name">&quot;Choose_FruitAnimation&quot;</param>
+                                    <param id="1" name="Parameter {n}">spr_Fruits.UID</param>
                                 </action>
                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="314370072805024" type="spr_Fruits">
                                     <param id="0" name="Impulse">0.3</param>
@@ -146,9 +162,6 @@
                     <actions>
                         <action id="-16" name="Wait" sid="496420164146868" type="System">
                             <param id="0" name="Seconds">3.4</param>
-                        </action>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="384024246979123" type="spr_CrashBox_MD">
-                            <param id="0" name="Mode">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="763932979208979" type="spr_CrashBox_MD" />
                     </actions>
@@ -187,7 +200,7 @@
                         <condition id="0" name="On function" sid="729291777700770" type="Function">
                             <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="659812245228689" type="spr_Box_MD">
+                        <condition id="-14" name="Pick by unique ID" sid="659812245228689" type="spr_Box_SM">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
@@ -212,6 +225,9 @@
                         <action id="-12" name="Subtract from" sid="104992032730211" type="spr_Box_SM">
                             <param id="0" name="Instance variable">BoxHealth_SM</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="585770111681073" type="TextDeveloper">
+                            <param id="0" name="Text">spr_Box_SM.BoxHealth_SM</param>
                         </action>
                     </actions>
                 </event-block>
@@ -288,9 +304,9 @@
                                     <param id="1" name="Layer">1</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="470627717074127" type="spr_Fruits">
-                                    <param id="0" name="Instance variable">Animation</param>
-                                    <param id="1" name="Value">int(random(0, 8 + 1))</param>
+                                <action id="0" name="Call function" sid="976861677737367" type="Function">
+                                    <param id="0" name="Name">&quot;Choose_FruitAnimation&quot;</param>
+                                    <param id="1" name="Parameter {n}">spr_Fruits.UID</param>
                                 </action>
                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="941562543765852" type="spr_Fruits">
                                     <param id="0" name="Impulse">0.3</param>
@@ -308,9 +324,6 @@
                     <actions>
                         <action id="-16" name="Wait" sid="637700929825028" type="System">
                             <param id="0" name="Seconds">3.4</param>
-                        </action>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="343887677834280" type="spr_CrashBox_SM">
-                            <param id="0" name="Mode">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="380422122783234" type="spr_CrashBox_SM" />
                     </actions>
@@ -334,7 +347,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="259570093865764" type="Function">
                                     <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
-                                    <param id="1" name="Parameter {n}">spr_Box_MD.UID</param>
+                                    <param id="1" name="Parameter {n}">spr_Box_SM.UID</param>
                                 </action>
                             </actions>
                         </event-block>
