@@ -9,7 +9,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <actions-namecolumn>106</actions-namecolumn>
     <condition-namecolumns>
         <nest>106</nest>
-        <nest>80</nest>
+        <nest>105</nest>
         <nest>80</nest>
         <nest>80</nest>
         <nest>80</nest>

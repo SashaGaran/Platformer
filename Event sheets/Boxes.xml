@@ -355,5 +355,20 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="576474914229277">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="737959779699038" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="636657769608427" type="spr_Box_MD">
+                    <param id="0" name="Velocity iterations">4</param>
+                    <param id="1" name="Position iterations">4</param>
+                </action>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="231390475775395" type="spr_Box_SM">
+                    <param id="0" name="Velocity iterations">4</param>
+                    <param id="1" name="Position iterations">4</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

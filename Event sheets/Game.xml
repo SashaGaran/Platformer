@@ -20,8 +20,12 @@
                     <param id="0" name="Import file">&quot;MyScript.js&quot;</param>
                 </action>
                 <action behavior="Physics" id="14" name="Set stepping iterations" sid="183103497913520" type="spr_Fruits">
-                    <param id="0" name="Velocity iterations">4</param>
-                    <param id="1" name="Position iterations">2</param>
+                    <param id="0" name="Velocity iterations">2</param>
+                    <param id="1" name="Position iterations">1</param>
+                </action>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="727809093518948" type="spr_FallingPlatform">
+                    <param id="0" name="Velocity iterations">1</param>
+                    <param id="1" name="Position iterations">1</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="628222834882360" type="DustParticle">
                     <param id="0" name="Pin to">spr_FallingPlatform</param>

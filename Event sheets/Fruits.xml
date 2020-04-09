@@ -54,6 +54,10 @@
                 <action behavior="Physics" id="27" name="Set enabled" sid="318958372600200" type="spr_Fruits">
                     <param id="0" name="Mode">0</param>
                 </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="494456614469955" type="spr_Fruits">
+                    <param id="0" name="Object">spr_Fruits</param>
+                    <param id="1" name="State">0</param>
+                </action>
                 <action id="-11" name="Add to" sid="263996560079934" type="spr_Player">
                     <param id="0" name="Instance variable">FruitsCount</param>
                     <param id="1" name="Value">1</param>

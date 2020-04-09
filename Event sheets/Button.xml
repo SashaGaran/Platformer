@@ -15,7 +15,12 @@
             <conditions>
                 <condition id="0" name="On clicked" sid="142262565471907" type="ButtonDeveloper" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="997922144147089" type="Function">
+                    <param id="0" name="Name">&quot;ShotBullet&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
