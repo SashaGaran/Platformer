@@ -286,7 +286,7 @@
                             <param id="0" name="Angle">random(0, 360)</param>
                         </action>
                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="453438829142481" type="spr_CrashBox_SM">
-                            <param id="0" name="Impulse">0.16</param>
+                            <param id="0" name="Impulse">0.08</param>
                             <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
