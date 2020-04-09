@@ -113,5 +113,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="611486978261673">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="765034335663823" type="spr_PlantBullet">
+                    <param id="0" name="Object">spr_Box_SM</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="922954870933285" type="Function">
+                    <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
+                    <param id="1" name="Parameter {n}">spr_Box_SM.UID</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

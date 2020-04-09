@@ -1546,8 +1546,10 @@
                         </animation>
                         <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="463504502667426" speed="12">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
-                                <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.25" y="0.208333" />
+                                <image-point name="SpawnCrash_TopRight" x="0.75" y="0.208333" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.25" y="0.791667" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.75" y="0.791667" />
                                 <collision-poly>
                                     <point x="0.178571" y="0.125" />
                                     <point x="0.821429" y="0.125" />
@@ -1559,6 +1561,10 @@
                                 <image-point name="SpawnCrash" x="0.5" y="0" />
                                 <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
                                 <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.25" y="0.208333" />
+                                <image-point name="SpawnCrash_TopRight" x="0.75" y="0.208333" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.25" y="0.791667" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.75" y="0.791667" />
                                 <collision-poly>
                                     <point x="0.178571" y="0.125" />
                                     <point x="0.821429" y="0.125" />
@@ -1570,6 +1576,10 @@
                                 <image-point name="SpawnCrash" x="0.5" y="0" />
                                 <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
                                 <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.25" y="0.208333" />
+                                <image-point name="SpawnCrash_TopRight" x="0.75" y="0.208333" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.25" y="0.791667" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.75" y="0.791667" />
                                 <collision-poly>
                                     <point x="0.178571" y="0.125" />
                                     <point x="0.821429" y="0.125" />
@@ -1581,6 +1591,10 @@
                                 <image-point name="SpawnCrash" x="0.5" y="0" />
                                 <image-point name="SpawnCrashLeft" x="0.285714" y="0" />
                                 <image-point name="SpawnCrashRight" x="0.714286" y="0" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.25" y="0.208333" />
+                                <image-point name="SpawnCrash_TopRight" x="0.75" y="0.208333" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.25" y="0.791667" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.75" y="0.791667" />
                                 <collision-poly>
                                     <point x="0.178571" y="0.125" />
                                     <point x="0.821429" y="0.125" />
@@ -1670,6 +1684,10 @@
                         </animation>
                         <animation framecount="3" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="701444618987672" speed="12">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
+                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
                                 <collision-poly>
                                     <point x="0.178571" y="0.125" />
                                     <point x="0.821429" y="0.125" />
@@ -1678,6 +1696,10 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
+                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
                                 <collision-poly>
                                     <point x="0.178571" y="0.125" />
                                     <point x="0.821429" y="0.125" />
@@ -1686,6 +1708,10 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
+                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
                                 <collision-poly>
                                     <point x="0.178571" y="0.125" />
                                     <point x="0.821429" y="0.125" />

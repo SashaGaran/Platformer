@@ -14,9 +14,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="1">Game</event-sheet>
         <event-sheet order="2">Player</event-sheet>
         <event-sheet order="3">Fruits</event-sheet>
-        <event-sheet order="4">Boxes</event-sheet>
+        <event-sheet active="1" order="4">Boxes</event-sheet>
         <event-sheet order="5">Button</event-sheet>
-        <event-sheet active="1" order="6">Plant</event-sheet>
+        <event-sheet order="6">Plant</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
