@@ -3,6 +3,20 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Plant</name>
     <events>
+        <variable constant="0" name="BulletDirection" sid="761920600631612" static="0" type="number">0</variable>
+        <event-block sid="760012653141631">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="740430103529927" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="302864945983200" type="Function">
+                    <param id="0" name="Name">&quot;ShotBullet&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="547924872386503">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="738556236650053" type="System">
@@ -14,6 +28,10 @@
             <actions>
                 <action id="7" name="Set mirrored" sid="248818478214014" type="spr_Plant">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="373772082829526" type="System">
+                    <param id="0" name="Variable">BulletDirection</param>
+                    <param id="1" name="Value">-0.4</param>
                 </action>
             </actions>
         </event-block>
@@ -28,6 +46,10 @@
             <actions>
                 <action id="7" name="Set mirrored" sid="519574594269233" type="spr_Plant">
                     <param id="0" name="State">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="774535384701930" type="System">
+                    <param id="0" name="Variable">BulletDirection</param>
+                    <param id="1" name="Value">0.4</param>
                 </action>
             </actions>
         </event-block>
@@ -73,8 +95,8 @@
                                             <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>
-                                        <action behavior="Physics" id="3" name="Apply impulse" sid="963950772791527" type="spr_PlantBullet">
-                                            <param id="0" name="Impulse X">-0.5</param>
+                                        <action behavior="Physics" id="3" name="Apply impulse" sid="187326133614411" type="spr_PlantBullet">
+                                            <param id="0" name="Impulse X">BulletDirection</param>
                                             <param id="1" name="Impulse Y">0</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
@@ -113,18 +135,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="611486978261673">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="765034335663823" type="spr_PlantBullet">
-                    <param id="0" name="Object">spr_Box_SM</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="922954870933285" type="Function">
-                    <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
-                    <param id="1" name="Parameter {n}">spr_Box_SM.UID</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
