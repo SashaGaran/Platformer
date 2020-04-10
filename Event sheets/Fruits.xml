@@ -3,6 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Fruits</name>
     <events>
+        <event-block sid="656271395196533">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="492985522873911" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="779862891735021" type="spr_Fruits">
+                    <param id="0" name="Velocity iterations">2</param>
+                    <param id="1" name="Position iterations">1</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Animation</comment>
         <event-block any="1" sid="123319482068560">
             <conditions>

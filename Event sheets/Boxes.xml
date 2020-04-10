@@ -3,6 +3,21 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Boxes</name>
     <events>
+        <event-block sid="576474914229277">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="737959779699038" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="636657769608427" type="spr_Box_MD">
+                    <param id="0" name="Velocity iterations">2</param>
+                    <param id="1" name="Position iterations">2</param>
+                </action>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="231390475775395" type="spr_Box_SM">
+                    <param id="0" name="Velocity iterations">2</param>
+                    <param id="1" name="Position iterations">2</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="549740159819450">
             <conditions>
                 <condition id="0" name="On function" sid="935062631655711" type="Function">
@@ -355,20 +370,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="576474914229277">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="737959779699038" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="14" name="Set stepping iterations" sid="636657769608427" type="spr_Box_MD">
-                    <param id="0" name="Velocity iterations">4</param>
-                    <param id="1" name="Position iterations">4</param>
-                </action>
-                <action behavior="Physics" id="14" name="Set stepping iterations" sid="231390475775395" type="spr_Box_SM">
-                    <param id="0" name="Velocity iterations">4</param>
-                    <param id="1" name="Position iterations">4</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

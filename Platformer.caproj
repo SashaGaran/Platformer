@@ -1670,53 +1670,53 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="662757449627845" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Items\Boxes\Box1\Idle.png">
-                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
-                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
-                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
-                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.227273" y="0.227273" />
+                                <image-point name="SpawnCrash_TopRight" x="0.772727" y="0.227273" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.227273" y="0.772727" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.772727" y="0.772727" />
                                 <collision-poly>
-                                    <point x="0.178571" y="0.125" />
-                                    <point x="0.821429" y="0.125" />
-                                    <point x="0.821429" y="0.875" />
-                                    <point x="0.178571" y="0.875" />
+                                    <point x="0.0909085" y="0.0909091" />
+                                    <point x="0.909091" y="0.0909091" />
+                                    <point x="0.909091" y="0.909091" />
+                                    <point x="0.0909085" y="0.909091" />
                                 </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="3" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="701444618987672" speed="12">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
-                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
-                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
-                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.125" />
+                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.125" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.875" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.875" />
                                 <collision-poly>
-                                    <point x="0.178571" y="0.125" />
-                                    <point x="0.821429" y="0.125" />
-                                    <point x="0.821429" y="0.875" />
-                                    <point x="0.178571" y="0.875" />
+                                    <point x="0.178571" y="0" />
+                                    <point x="0.821429" y="0" />
+                                    <point x="0.821429" y="1" />
+                                    <point x="0.178571" y="1" />
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
-                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
-                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
-                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.269231" y="0.166667" />
+                                <image-point name="SpawnCrash_TopRight" x="0.730769" y="0.166667" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.269231" y="0.833333" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.730769" y="0.833333" />
                                 <collision-poly>
-                                    <point x="0.178571" y="0.125" />
-                                    <point x="0.821429" y="0.125" />
-                                    <point x="0.821429" y="0.875" />
-                                    <point x="0.178571" y="0.875" />
+                                    <point x="0.153846" y="0" />
+                                    <point x="0.846154" y="0" />
+                                    <point x="0.846154" y="1" />
+                                    <point x="0.153846" y="1" />
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="SpawnCrash_TopLeft" x="0.285714" y="0.25" />
-                                <image-point name="SpawnCrash_TopRight" x="0.714286" y="0.25" />
-                                <image-point name="SpawnCrash_BottomLeft" x="0.285714" y="0.75" />
-                                <image-point name="SpawnCrash_BottomRight" x="0.714286" y="0.75" />
+                                <image-point name="SpawnCrash_TopLeft" x="0.25" y="0.2" />
+                                <image-point name="SpawnCrash_TopRight" x="0.75" y="0.2" />
+                                <image-point name="SpawnCrash_BottomLeft" x="0.25" y="0.8" />
+                                <image-point name="SpawnCrash_BottomRight" x="0.75" y="0.8" />
                                 <collision-poly>
-                                    <point x="0.178571" y="0.125" />
-                                    <point x="0.821429" y="0.125" />
-                                    <point x="0.821429" y="0.875" />
-                                    <point x="0.178571" y="0.875" />
+                                    <point x="0.125" y="0.05" />
+                                    <point x="0.875" y="0.05" />
+                                    <point x="0.875" y="0.95" />
+                                    <point x="0.125" y="0.95" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1983,6 +1983,31 @@
                 <plugin id="Spritefont2" />
                 <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Menu\Text\Text (Black) (8x10).png" />
             </object-type>
+            <object-type name="spr_LiveBar" sid="107015204437203">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="257767222273288" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User\Desktop\Live Bar.png">
+                            <image-point name="Heart0" x="0.333333" y="0.529412" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_Heart" sid="604522336345827">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="8" loop="0" name="Idle" pingpong="0" repeatcount="0" repeatto="0" sid="967235269937994" speed="12">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Enemies">
             <object-folder name="Plant">
@@ -2210,6 +2235,8 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="415087686240098" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SpawnCrash0" x="0.6" y="0.2" />
+                                <image-point name="SpawnCrash1" x="0.4" y="0.8" />
                                 <collision-poly>
                                     <point x="0.1" y="0.3" />
                                     <point x="0.3" y="0.1" />
@@ -2223,20 +2250,20 @@
                             </frame>
                         </animation>
                         <animation framecount="2" loop="0" name="Crash" pingpong="0" repeatcount="1" repeatto="0" sid="328723065137728" speed="0">
-                            <frame duration="1" hotspotX="0.5625" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.666667" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.25" y="0.625" />
-                                    <point x="0.6875" y="0.625" />
-                                    <point x="0.6875" y="0.375" />
-                                    <point x="0.25" y="0.375" />
+                                    <point x="0.111111" y="0.833333" />
+                                    <point x="0.888889" y="0.833333" />
+                                    <point x="0.888889" y="0.166667" />
+                                    <point x="0.111111" y="0.166667" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.4375" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.333333" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.3125" y="0.375" />
-                                    <point x="0.75" y="0.375" />
-                                    <point x="0.75" y="0.625" />
-                                    <point x="0.3125" y="0.625" />
+                                    <point x="0.111111" y="0.166667" />
+                                    <point x="0.888889" y="0.166667" />
+                                    <point x="0.888889" y="0.833333" />
+                                    <point x="0.111111" y="0.833333" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -2663,7 +2690,7 @@
                 </animation-folder>
             </animation-folder>
         </object-type>
-        <object-type name="Tilemap" sid="755871967593294">
+        <object-type name="TilemapCollisionON" sid="755871967593294">
             <plugin id="Tilemap" />
             <behaviors>
                 <behavior-type name="Solid" sid="831535343187294">
@@ -2719,9 +2746,9 @@
                 </tile>
                 <tile id="29">
                     <collision-poly>
+                        <point x="0" y="0.984375" />
                         <point x="0" y="0" />
                         <point x="1" y="0" />
-                        <point x="0.5" y="1" />
                     </collision-poly>
                 </tile>
                 <tile id="30">
@@ -2740,7 +2767,7 @@
                 </tile>
                 <tile id="51">
                     <collision-poly>
-                        <point x="0.5" y="0" />
+                        <point x="0.5" y="0.5" />
                         <point x="1" y="1" />
                         <point x="0" y="1" />
                     </collision-poly>
@@ -2829,6 +2856,7 @@
         <event-sheet>Fruits.xml</event-sheet>
         <event-sheet>Boxes.xml</event-sheet>
         <event-sheet>Button.xml</event-sheet>
+        <event-sheet>UI.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2" />

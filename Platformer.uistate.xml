@@ -17,6 +17,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="4">Boxes</event-sheet>
         <event-sheet order="5">Button</event-sheet>
         <event-sheet order="6">Plant</event-sheet>
+        <event-sheet order="7">UI</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,17 +29,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/Fruits/" />
-        <folder expanded="1" path="object-folder/Boxes/" />
+        <folder expanded="0" path="object-folder/Boxes/" />
         <folder expanded="0" path="object-folder/Boxes/Box_MD/" />
         <folder expanded="0" path="object-folder/Boxes/Box_SM/" />
-        <folder expanded="1" path="object-folder/Traps/" />
+        <folder expanded="0" path="object-folder/Traps/" />
         <folder expanded="0" path="object-folder/Traps/FallingPlatform/" />
         <folder expanded="1" path="object-folder/Traps/Saw/" />
         <folder expanded="0" path="object-folder/Traps/Spikes/" />
         <folder expanded="0" path="object-folder/UI/" />
-        <folder expanded="0" path="object-folder/Enemies/" />
-        <folder expanded="0" path="object-folder/Enemies/Plant/" />
-        <folder expanded="1" path="object-folder/Developer/" />
+        <folder expanded="1" path="object-folder/Enemies/" />
+        <folder expanded="1" path="object-folder/Enemies/Plant/" />
+        <folder expanded="0" path="object-folder/Developer/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
@@ -54,6 +55,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_FallingPlatform/" />
         <folder expanded="1" path="animation-folder/spr_Saw/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/spr_LiveBar/" />
+        <folder expanded="1" path="animation-folder/spr_Heart/" />
         <folder expanded="1" path="animation-folder/spr_Plant/" />
         <folder expanded="1" path="animation-folder/spr_PlantBullet/" />
         <folder expanded="1" path="animation-folder/AnimationMultimetr/" />

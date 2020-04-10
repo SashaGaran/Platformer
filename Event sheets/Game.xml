@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <include>UI</include>
         <include>Boxes</include>
         <include>Button</include>
         <include>Fruits</include>
@@ -18,10 +19,6 @@
                 </action>
                 <action id="0" name="Import file" sid="187242431914079" type="Import">
                     <param id="0" name="Import file">&quot;MyScript.js&quot;</param>
-                </action>
-                <action behavior="Physics" id="14" name="Set stepping iterations" sid="183103497913520" type="spr_Fruits">
-                    <param id="0" name="Velocity iterations">2</param>
-                    <param id="1" name="Position iterations">1</param>
                 </action>
                 <action behavior="Physics" id="14" name="Set stepping iterations" sid="727809093518948" type="spr_FallingPlatform">
                     <param id="0" name="Velocity iterations">1</param>
