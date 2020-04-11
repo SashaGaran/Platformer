@@ -33,5 +33,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="469301041747203">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="850566642158022" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="666889193818499" type="TextDeveloper">
+                    <param id="0" name="Text">PlayerHealth</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

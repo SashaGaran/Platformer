@@ -1989,6 +1989,8 @@
                     <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="257767222273288" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User\Desktop\Live Bar.png">
                             <image-point name="Heart0" x="0.333333" y="0.529412" />
+                            <image-point name="Heart1" x="0.5" y="0.529412" />
+                            <image-point name="Heart2" x="0.666667" y="0.529412" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2311,6 +2313,7 @@
         <object-type name="spr_Player" sid="819834066908733">
             <plugin id="Sprite" />
             <instance-variables>
+                <instance-variable name="Health" sid="223952823063006" type="number" />
                 <instance-variable name="FruitsCount" sid="246085544705769" type="number" />
             </instance-variables>
             <behaviors>

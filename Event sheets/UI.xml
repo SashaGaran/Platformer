@@ -3,19 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI</name>
     <events>
-        <event-block sid="160636528977218">
+        <event-block sid="276386166917760">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="372215838537429" type="System" />
+                <condition id="-2" name="On start of layout" sid="396038419265218" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="579073367602312" type="spr_LiveBar">
-                    <param id="0" name="Object">spr_Heart</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-                <action id="-7" name="Set size" sid="798212352281415" type="spr_Heart">
-                    <param id="0" name="Width">11</param>
-                    <param id="1" name="Height">9.9</param>
+                <action id="0" name="Call function" sid="855947694262368" type="Function">
+                    <param id="0" name="Name">&quot;UpdateHeartBar&quot;</param>
+                    <param id="1" name="Parameter {n}">PlayerHealth</param>
                 </action>
             </actions>
         </event-block>
@@ -34,6 +29,60 @@
                 </action>
                 <action id="3" name="Start" sid="210594281911771" type="spr_Heart">
                     <param id="0" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="148542586766805" title="Group">
+            <sub-events>
+                <event-block sid="714728823623734">
+                    <conditions>
+                        <condition id="0" name="On function" sid="924727345498922" type="Function">
+                            <param id="0" name="Name">&quot;UpdateHeartBar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="214098828409515" type="spr_Heart" />
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="Number" sid="221211462811371" static="0" type="number">0</variable>
+                        <event-block sid="198895739333539">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="206215040755507" type="System">
+                                    <param id="0" name="Count">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="963590504853909" type="spr_LiveBar">
+                                    <param id="0" name="Object">spr_Heart</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">Number + 1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="312630059977443" type="spr_Heart">
+                                    <param id="0" name="Width">11</param>
+                                    <param id="1" name="Height">9.9</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="345247124873458" type="System">
+                                    <param id="0" name="Variable">Number</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="743794875128573">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="385791583872661" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="461598264609829" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

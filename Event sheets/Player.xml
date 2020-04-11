@@ -3,6 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player</name>
     <events>
+        <variable constant="0" name="PlayerHealth" sid="732611687533097" static="0" type="number">3</variable>
+        <event-block sid="223310732730291">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="642221264646472" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="862558844946134" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="0" name="Call function" sid="241628444228601" type="Function">
+                    <param id="0" name="Name">&quot;UpdateHeartBar&quot;</param>
+                    <param id="1" name="Parameter {n}">PlayerHealth</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Basic</comment>
         <event-block any="1" sid="566399919168753">
             <conditions>
@@ -184,6 +200,64 @@
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="791887667985353">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="862733726108442" type="spr_Player">
+                    <param id="0" name="Object">spr_PlantBullet</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="310613035878796">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="189855112031846" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="658168857717069" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="370626215312291" type="Function">
+                            <param id="0" name="Name">&quot;UpdateHeartBar&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerHealth</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="348729937369610">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="494702973998617" type="Keyboard">
+                    <param id="0" name="Key">75</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="741377738897541">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="598242185814648" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="205542738607035" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="142136227804236" type="Function">
+                            <param id="0" name="Name">&quot;UpdateHeartBar&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerHealth</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
