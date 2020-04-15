@@ -22,5 +22,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="178459623253388" title="ForDeveloper">
+            <sub-events>
+                <variable constant="0" name="Variable1" sid="718806437301886" static="0" type="number">0</variable>
+                <event-block sid="412577728862980">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="595623818765865" type="ButtonDeveloper_Confirm" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="582052089747314" type="System">
+                            <param id="0" name="Variable">Variable1</param>
+                            <param id="1" name="Value">TextBox.Text</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="277845996275642" type="System">
+                            <param id="0" name="Time scale">Variable1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

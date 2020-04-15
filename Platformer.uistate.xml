@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Level_0</layout>
+        <layout active="1" order="0">Level_0</layout>
         <event-sheet order="1">Game</event-sheet>
         <event-sheet order="2">Player</event-sheet>
         <event-sheet order="3">Fruits</event-sheet>
         <event-sheet order="4">Boxes</event-sheet>
-        <event-sheet active="1" order="5">Button</event-sheet>
+        <event-sheet order="5">Button</event-sheet>
         <event-sheet order="6">Plant</event-sheet>
         <event-sheet order="7">UI</event-sheet>
     </open-tabs>
@@ -39,7 +39,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/UI/" />
         <folder expanded="1" path="object-folder/Enemies/" />
         <folder expanded="1" path="object-folder/Enemies/Plant/" />
-        <folder expanded="0" path="object-folder/Developer/" />
+        <folder expanded="1" path="object-folder/Developer/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
@@ -59,6 +59,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_Heart/" />
         <folder expanded="1" path="animation-folder/spr_Plant/" />
         <folder expanded="1" path="animation-folder/spr_PlantBullet/" />
+        <folder expanded="1" path="animation-folder/spr_PlantBulletCrash/" />
         <folder expanded="1" path="animation-folder/AnimationMultimetr/" />
         <folder expanded="1" path="animation-folder/Multimetr/" />
         <folder expanded="1" path="animation-folder/spr_Player/" />

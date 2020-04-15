@@ -33,113 +33,180 @@
         </event-block>
         <event-group description="" sid="838997115336792" title="Bullet">
             <sub-events>
-                <event-block sid="798270277851728">
-                    <conditions>
-                        <condition id="0" name="On function" sid="776572066333233" type="Function">
-                            <param id="0" name="Name">&quot;ShotBullet&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="468734772423879" type="spr_Plant">
-                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="225075372295594">
-                    <conditions>
-                        <condition id="2" name="Is playing" sid="334979718464019" type="spr_Plant">
-                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="361319888627137" title="obj_Bullet">
                     <sub-events>
-                        <event-block sid="161456875929263">
+                        <event-block sid="798270277851728">
                             <conditions>
-                                <condition id="3" name="Compare frame" sid="121039289625534" type="spr_Plant">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">4</param>
+                                <condition id="0" name="On function" sid="776572066333233" type="Function">
+                                    <param id="0" name="Name">&quot;ShotBullet&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="468734772423879" type="spr_Plant">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="225075372295594">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="334979718464019" type="spr_Plant">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="428909316964148">
+                                <event-block sid="161456875929263">
                                     <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="999871845831590" type="System" />
+                                        <condition id="3" name="Compare frame" sid="121039289625534" type="spr_Plant">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">4</param>
+                                        </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="807587166803457" type="spr_Plant">
-                                            <param id="0" name="Object">spr_PlantBullet</param>
-                                            <param id="1" name="Layer">1</param>
-                                            <param id="2" name="Image point">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="850425294115629">
+                                        <event-block sid="428909316964148">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="394279317271458" type="System">
-                                                    <param id="0" name="First value">spr_Player.X</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">spr_Plant.X</param>
-                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="999871845831590" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action behavior="Physics" id="3" name="Apply impulse" sid="100747090225414" type="spr_PlantBullet">
-                                                    <param id="0" name="Impulse X">-(0.3 + random(0.02, 0.14))</param>
-                                                    <param id="1" name="Impulse Y">0</param>
-                                                    <param id="2" name="Image point">0</param>
+                                                <action id="0" name="Spawn another object" sid="807587166803457" type="spr_Plant">
+                                                    <param id="0" name="Object">spr_PlantBullet</param>
+                                                    <param id="1" name="Layer">1</param>
+                                                    <param id="2" name="Image point">1</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="430754195531151">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="637042480859713" type="System">
-                                                    <param id="0" name="First value">spr_Player.X</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Second value">spr_Plant.X</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action behavior="Physics" id="3" name="Apply impulse" sid="545029852686342" type="spr_PlantBullet">
-                                                    <param id="0" name="Impulse X">0.3 + random(0.02, 0.14)</param>
-                                                    <param id="1" name="Impulse Y">0</param>
-                                                    <param id="2" name="Image point">0</param>
-                                                </action>
-                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="850425294115629">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="394279317271458" type="System">
+                                                            <param id="0" name="First value">spr_Player.X</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">spr_Plant.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Physics" id="3" name="Apply impulse" sid="100747090225414" type="spr_PlantBullet">
+                                                            <param id="0" name="Impulse X">-(0.3 + random(0.02, 0.14))</param>
+                                                            <param id="1" name="Impulse Y">0</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="430754195531151">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="637042480859713" type="System">
+                                                            <param id="0" name="First value">spr_Player.X</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">spr_Plant.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Physics" id="3" name="Apply impulse" sid="545029852686342" type="spr_PlantBullet">
+                                                            <param id="0" name="Impulse X">0.3 + random(0.02, 0.14)</param>
+                                                            <param id="1" name="Impulse Y">0</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="391605841777664">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="702065430660210" type="spr_Plant">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="572249009663857" type="spr_Plant">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="749503375521508">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="841247000996572" type="spr_PlantBullet" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="442138902593675" type="spr_PlantBullet">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action behavior="easy_Opacity" id="10" name="Start" sid="705486146673090" type="spr_PlantBullet" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="543036380189032">
+                            <conditions>
+                                <condition behavior="Physics" id="0" inverted="1" name="Is sleeping" sid="909099526910543" type="spr_PlantBullet" />
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="662289989353641" type="spr_PlantBullet">
+                                    <param id="0" name="Effect">&quot;DirectionBlur&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">spr_PlantBullet.Angle</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="987281115779436" type="spr_PlantBullet">
+                                    <param id="0" name="Effect">&quot;DirectionBlur&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">(4 * spr_PlantBullet.Physics.VelocityX)/700</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="391605841777664">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="702065430660210" type="spr_Plant">
-                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="572249009663857" type="spr_Plant">
-                            <param id="0" name="Animation">&quot;Idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="749503375521508">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="841247000996572" type="spr_PlantBullet" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="568468249403821" type="System">
-                            <param id="0" name="Seconds">3.4</param>
-                        </action>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="784324975782373" type="spr_PlantBullet">
-                            <param id="0" name="Mode">0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="583126799023644" type="spr_PlantBullet" />
-                    </actions>
-                </event-block>
+                </event-group>
+                <event-group description="" sid="951104809628494" title="obj_BulletCrash">
+                    <sub-events>
+                        <event-block any="1" sid="553914128171304">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="727648600134267" type="spr_PlantBullet">
+                                    <param id="0" name="Object">Ground</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="787129343089193" type="spr_PlantBullet">
+                                    <param id="0" name="Object">spr_Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="106213824545973" type="spr_PlantBullet" />
+                                <action id="0" name="Spawn another object" sid="266695536920524" type="spr_PlantBullet">
+                                    <param id="0" name="Object">spr_PlantBulletCrash</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="843014619202073" type="spr_PlantBulletCrash">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action behavior="Physics" id="15" name="Set velocity" sid="575919143893993" type="spr_PlantBulletCrash">
+                                    <param id="0" name="X component">spr_PlantBullet.Physics.VelocityX</param>
+                                    <param id="1" name="Y component">spr_PlantBullet.Physics.VelocityY</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="376637139450914" type="spr_PlantBullet">
+                                    <param id="0" name="Object">spr_PlantBulletCrash</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="820275687022452" type="spr_PlantBulletCrash">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Physics" id="15" name="Set velocity" sid="973270785081007" type="spr_PlantBulletCrash">
+                                    <param id="0" name="X component">spr_PlantBullet.Physics.VelocityX</param>
+                                    <param id="1" name="Y component">spr_PlantBullet.Physics.VelocityY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="240657543887354">
+                            <conditions>
+                                <condition behavior="EaseTweenMod" id="4" name="On tween end" sid="200337037668180" type="spr_PlantBulletCrash" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="330034906232665" type="spr_PlantBulletCrash" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

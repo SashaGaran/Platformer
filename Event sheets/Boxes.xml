@@ -90,8 +90,8 @@
                         <action id="-8" name="Set angle" sid="274173524751945" type="spr_CrashBox_MD">
                             <param id="0" name="Angle">random(0, 360)</param>
                         </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="978171218936149" type="spr_CrashBox_MD">
-                            <param id="0" name="Impulse">0.08</param>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="109749347077503" type="spr_CrashBox_MD">
+                            <param id="0" name="Impulse">0.07 + random(0.01, 0.03)</param>
                             <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -106,8 +106,8 @@
                         <action id="-8" name="Set angle" sid="394706583312119" type="spr_CrashBox_MD">
                             <param id="0" name="Angle">random(0, 360)</param>
                         </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="426740973305721" type="spr_CrashBox_MD">
-                            <param id="0" name="Impulse">0.08</param>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="672088264217704" type="spr_CrashBox_MD">
+                            <param id="0" name="Impulse">0.07 + random(0.01, 0.03)</param>
                             <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -122,8 +122,8 @@
                         <action id="-8" name="Set angle" sid="480443417108934" type="spr_CrashBox_MD">
                             <param id="0" name="Angle">random(0, 360)</param>
                         </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="985539735101043" type="spr_CrashBox_MD">
-                            <param id="0" name="Impulse">0.08</param>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="526072453432776" type="spr_CrashBox_MD">
+                            <param id="0" name="Impulse">0.07 + random(0.01, 0.03)</param>
                             <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -139,7 +139,7 @@
                             <param id="0" name="Angle">random(0, 360)</param>
                         </action>
                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="912820471102240" type="spr_CrashBox_MD">
-                            <param id="0" name="Impulse">0.08</param>
+                            <param id="0" name="Impulse">0.07 + random(0.01, 0.03)</param>
                             <param id="1" name="Angle">random(250, 290)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -170,15 +170,12 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="296425705314584">
+                <event-block sid="243369991017234">
                     <conditions>
-                        <condition id="-18" name="On created" sid="343851148747735" type="spr_CrashBox_MD" />
+                        <condition behavior="ease_Opacity" id="4" name="On tween end" sid="622395136651237" type="spr_CrashBox_MD" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="496420164146868" type="System">
-                            <param id="0" name="Seconds">3.4</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="763932979208979" type="spr_CrashBox_MD" />
+                        <action id="-9" name="Destroy" sid="920591943635623" type="spr_CrashBox_MD" />
                     </actions>
                 </event-block>
                 <event-block any="1" sid="431810682374641">
@@ -332,15 +329,12 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="119405485455622">
+                <event-block sid="161593661406170">
                     <conditions>
-                        <condition id="-18" name="On created" sid="672415172984715" type="spr_CrashBox_SM" />
+                        <condition behavior="ease_Opacity" id="4" name="On tween end" sid="988340207585461" type="spr_CrashBox_SM" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="637700929825028" type="System">
-                            <param id="0" name="Seconds">3.4</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="380422122783234" type="spr_CrashBox_SM" />
+                        <action id="-9" name="Destroy" sid="904697654500608" type="spr_CrashBox_SM" />
                     </actions>
                 </event-block>
                 <event-block any="1" sid="132948935331496">
