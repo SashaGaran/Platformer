@@ -12,6 +12,30 @@
                     <param id="0" name="Name">&quot;Update_HealthBar&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="100" name="Create local camera" sid="200642942230353" type="MagiCam">
+                    <param id="0" name="Name">&quot;Camera0&quot;</param>
+                    <param id="1" name="X">spr_Player.X</param>
+                    <param id="2" name="Y">spr_Player.Y</param>
+                    <param id="3" name="Scale">1</param>
+                    <param id="4" name="Active">1</param>
+                </action>
+                <action id="102" name="Set active camera" sid="907463128734784" type="MagiCam">
+                    <param id="0" name="Name">&quot;Camera0&quot;</param>
+                </action>
+                <action id="3" name="Enable following" sid="970100715753574" type="MagiCam">
+                    <param id="0" name="Camera">&quot;Camera0&quot;</param>
+                    <param id="1" name="Following">0</param>
+                </action>
+                <action id="1" name="Set follow lag" sid="612177299412427" type="MagiCam">
+                    <param id="0" name="Camera">&quot;Camera0&quot;</param>
+                    <param id="1" name="Lag">88</param>
+                </action>
+                <action id="0" name="Follow object" sid="380020926375532" type="MagiCam">
+                    <param id="0" name="Camera">&quot;Camera0&quot;</param>
+                    <param id="1" name="Object">spr_Player</param>
+                    <param id="2" name="Weight">1</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="712163788346380">
@@ -32,7 +56,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="148542586766805" title="Group">
+        <event-group description="" sid="148542586766805" title="HealthBar">
             <sub-events>
                 <event-block sid="714728823623734">
                     <conditions>
@@ -57,10 +81,6 @@
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">Number + 1</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="312630059977443" type="spr_Heart">
-                                    <param id="0" name="Width">11</param>
-                                    <param id="1" name="Height">9.9</param>
-                                </action>
                                 <action id="-10" name="Add to" sid="345247124873458" type="System">
                                     <param id="0" name="Variable">Number</param>
                                     <param id="1" name="Value">1</param>
@@ -68,6 +88,30 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="637119231083211" title="Alert">
+            <sub-events>
+                <event-block sid="859321906417751">
+                    <conditions>
+                        <condition id="5" name="On Open" sid="621703514642012" type="SweetAlert" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="683900798139236" type="System">
+                            <param id="0" name="Time scale">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="600371598280565">
+                    <conditions>
+                        <condition id="0" name="On Close" sid="288877962005780" type="SweetAlert" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="621632175728212" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

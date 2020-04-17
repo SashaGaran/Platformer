@@ -93,13 +93,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Add advanced notification" sid="262669675638745" type="Notifications">
-                    <param id="0" name="Title">&quot;Success&quot;</param>
-                    <param id="1" name="Text">&quot;AJAX successfully requested file JSON!&quot;</param>
-                    <param id="2" name="Image">&quot;icon-256.png&quot;</param>
-                    <param id="3" name="Sticky">0</param>
-                    <param id="4" name="Notification style">2</param>
-                    <param id="5" name="Time">10000</param>
+                <action id="0" name="Open with inputs" sid="527974016787894" type="SweetAlert">
+                    <param id="0" name="Tag">&quot;LoadGame_Success&quot;</param>
+                    <param id="1" name="Message type">1</param>
+                    <param id="2" name="Title">&quot;Success&quot;</param>
+                    <param id="3" name="Text">&quot;AJAX successfully requested file JSON!&quot;</param>
+                    <param id="4" name="Button confirm">&quot;Okay&quot;</param>
+                    <param id="5" name="Button cancel">&quot;&quot;</param>
+                    <param id="6" name="Allow cancel with escape key">1</param>
+                    <param id="7" name="Allow cancel with outside click">1</param>
+                    <param id="8" name="Error message">1</param>
+                    <param id="9" name="Input {n}"></param>
                 </action>
                 <action id="11" name="Load" sid="295342870612004" type="Array">
                     <param id="0" name="JSON">AJAX.LastData</param>
@@ -128,13 +132,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Add advanced notification" sid="603697046199324" type="Notifications">
-                    <param id="0" name="Title">&quot;Error&quot;</param>
-                    <param id="1" name="Text">&quot;AJAX error to load file JSON!&quot;</param>
-                    <param id="2" name="Image">&quot;icon-256.png&quot;</param>
-                    <param id="3" name="Sticky">0</param>
-                    <param id="4" name="Notification style">5</param>
-                    <param id="5" name="Time">10000</param>
+                <action id="0" name="Open with inputs" sid="203438774467205" type="SweetAlert">
+                    <param id="0" name="Tag">&quot;LoadGame_Error&quot;</param>
+                    <param id="1" name="Message type">1</param>
+                    <param id="2" name="Title">&quot;Error&quot;</param>
+                    <param id="3" name="Text">&quot;AJAX error to load file JSON!&quot;</param>
+                    <param id="4" name="Button confirm">&quot;Okay&quot;</param>
+                    <param id="5" name="Button cancel">&quot;&quot;</param>
+                    <param id="6" name="Allow cancel with escape key">1</param>
+                    <param id="7" name="Allow cancel with outside click">1</param>
+                    <param id="8" name="Error message">1</param>
+                    <param id="9" name="Input {n}"></param>
                 </action>
             </actions>
         </event-block>

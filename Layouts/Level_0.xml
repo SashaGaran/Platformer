@@ -25,7 +25,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
-            <use-render-cells>0</use-render-cells>
+            <use-render-cells>1</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
@@ -932,7 +932,7 @@
                                 <initial>current</initial>
                                 <target>0</target>
                                 <duration>1.2</duration>
-                                <wait>1.95</wait>
+                                <wait>1.6</wait>
                                 <playback-mode>Play Once</playback-mode>
                                 <value>0</value>
                                 <coordinate-mode>Absolute</coordinate-mode>
@@ -987,7 +987,7 @@
                                 <initial>current</initial>
                                 <target>0</target>
                                 <duration>1.2</duration>
-                                <wait>1.95</wait>
+                                <wait>1.6</wait>
                                 <playback-mode>Play Once</playback-mode>
                                 <value>0</value>
                                 <coordinate-mode>Absolute</coordinate-mode>
@@ -1019,10 +1019,20 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>300</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>507</x>
+                        <x>511</x>
                         <y>304</y>
                         <z>0</z>
                         <width>44</width>
@@ -1048,7 +1058,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>260</max-speed>
+                                <max-speed>250</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>280</jump-strength>
@@ -1062,7 +1072,7 @@
                         </behavior-instance>
                         <behavior-instance type="ScrollTo">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="BoundToLayout">
@@ -1482,7 +1492,7 @@
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>1</density>
                                 <friction>0.6</friction>
-                                <elasticity>0.08</elasticity>
+                                <elasticity>0.06</elasticity>
                                 <linear-damping>0.1</linear-damping>
                                 <angular-damping>0.1</angular-damping>
                                 <bullet>No</bullet>
@@ -1537,7 +1547,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
-            <use-render-cells>0</use-render-cells>
+            <use-render-cells>1</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
@@ -1572,7 +1582,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -1681,7 +1691,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="EaseTweenMod">
@@ -1736,7 +1746,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>8</x>
-                        <y>8</y>
+                        <y>50</y>
                         <z>0</z>
                         <width>99</width>
                         <height>19</height>
@@ -1752,16 +1762,16 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Idle</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>45</x>
-                        <y>51</y>
+                        <x>41</x>
+                        <y>25</y>
                         <z>0</z>
-                        <width>72.599998474</width>
-                        <height>37.400001526</height>
+                        <width>66</width>
+                        <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1774,13 +1784,13 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Idle</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-31</x>
-                        <y>6</y>
+                        <x>30</x>
+                        <y>26</y>
                         <z>0</z>
                         <width>10</width>
                         <height>9</height>
@@ -1914,7 +1924,16 @@
                     </world>
                 </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="Inverse">
+                    <effect id="inverse" />
+                    <effect-instance type="Inverse">
+                        <parameters>
+                            <intensity>0</intensity>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
     </layers>
     <nonworld-instances>

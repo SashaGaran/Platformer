@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Platformer</name>
-    <description></description>
+    <description>Platformer game for Construct 2</description>
     <version>1.0.0.0</version>
     <author></author>
     <author-email></author-email>
@@ -15,20 +15,22 @@
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Chris Hackmann (aka linkman2004)" id="MagiCam" version="6.5">MagiCam</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="PlayLive and Andrews Vinícius" id="SweetAlert" version="0.200000003">Sweet Alert</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="McKack" id="mck_import" version="1.100000024">Import</plugin>
-        <plugin author="SirG" id="sirg_notifications" version="1.299999952">Notifications</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -41,6 +43,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="chrisbrobs" id="directionblur">DirectionBlur</effect>
+        <effect author="Scirra" id="inverse">Inverse</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
     </used-effects>
     <configurations>
@@ -2020,6 +2023,11 @@
             <object-folder name="Plant">
                 <object-type name="spr_Plant" sid="220323022249497">
                     <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LineOfSight" sid="600956316630553">
+                            <behavior id="LOS" />
+                        </behavior-type>
+                    </behaviors>
                     <animation-folder>
                         <animation framecount="11" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="766690317938711" speed="24">
                             <frame duration="1" hotspotX="0.590909" hotspotY="1">
@@ -2843,8 +2851,11 @@
         <object-type name="AJAX" sid="854343508207698">
             <plugin id="AJAX" />
         </object-type>
-        <object-type name="Notifications" sid="717458619630058">
-            <plugin id="sirg_notifications" />
+        <object-type name="SweetAlert" sid="984385156106844">
+            <plugin id="SweetAlert" />
+        </object-type>
+        <object-type name="MagiCam" sid="993855130377728">
+            <plugin id="MagiCam" />
         </object-type>
     </object-folder>
     <families />
@@ -2867,18 +2878,27 @@
         <global-instance type="Function" uid="4" />
         <global-instance type="Mouse" uid="6" />
         <global-instance type="AJAX" uid="53" />
-        <global-instance type="Notifications" uid="54">
+        <global-instance type="SweetAlert" uid="55">
             <properties>
-                <position>bottom-right</position>
-                <fade-in-speed>medium</fade-in-speed>
-                <fade-out-speed>medium</fade-out-speed>
-                <time>5000</time>
-                <max-number>0</max-number>
-                <default-options></default-options>
-                <sticky>true</sticky>
-                <style>Success</style>
+                <error-message></error-message>
+                <text>You must complete all fields</text>
+                <e-mail>Invalid email address</e-mail>
+                <password>Passwords must be the same and can not be empty</password>
+                <number>Invalid number</number>
+                <url>Enter a valid URL</url>
+                <radio>Must choise a valid option</radio>
+                <progress>You must complete all fields</progress>
+                <style></style>
+                <position>Center</position>
+                <background>rgb(255, 255, 255)</background>
+                <color>rgb(56, 56, 56)</color>
+                <width>25%</width>
+                <invert-buttons-positions>False</invert-buttons-positions>
+                <cancel-background-color>rgb(160, 160, 160)</cancel-background-color>
+                <confirm-background-color>rgb(40, 120, 240)</confirm-background-color>
             </properties>
         </global-instance>
+        <global-instance type="MagiCam" uid="57" />
     </global-instances>
     <sounds-folder />
     <music-folder />
