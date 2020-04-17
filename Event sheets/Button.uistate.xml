@@ -5,11 +5,11 @@ It is entirely optional and the project will load without it.  If you are placin
 you probably do not want to add any .uistate.xml files to the repository.-->
     <show-addaction-links>1</show-addaction-links>
     <scroll-pos>0</scroll-pos>
-    <conditions-column>259</conditions-column>
-    <actions-namecolumn>106</actions-namecolumn>
+    <conditions-column>272</conditions-column>
+    <actions-namecolumn>102</actions-namecolumn>
     <condition-namecolumns>
-        <nest>102</nest>
-        <nest>110</nest>
+        <nest>122</nest>
+        <nest>127</nest>
         <nest>80</nest>
         <nest>80</nest>
         <nest>80</nest>
@@ -17,6 +17,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <nest>49</nest>
         <nest>30</nest>
         <nest>16</nest>
+        <nest>14</nest>
     </condition-namecolumns>
     <events />
 </c2uistate>

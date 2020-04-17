@@ -3,14 +3,19 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Fruits</name>
     <events>
-        <event-block sid="656271395196533">
+        <event-block sid="974124908626186">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="492985522873911" type="System" />
+                <condition id="0" name="On function" sid="231164144292538" type="Function">
+                    <param id="0" name="Name">&quot;Choose_FruitAnimation&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="324447502353142" type="spr_Fruits">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
             </conditions>
             <actions>
-                <action behavior="Physics" id="14" name="Set stepping iterations" sid="779862891735021" type="spr_Fruits">
-                    <param id="0" name="Velocity iterations">2</param>
-                    <param id="1" name="Position iterations">1</param>
+                <action id="4" name="Set animation" sid="981622463364245" type="spr_Fruits">
+                    <param id="0" name="Animation">choose(&quot;Apple&quot;, &quot;Bananas&quot;, &quot;Cherries&quot;, &quot;Kiwi&quot;, &quot;Melon&quot;, &quot;Orange&quot;, &quot;Pineapple&quot;, &quot;Strawberry&quot;)</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -55,6 +60,7 @@
             </actions>
         </event-block>
         <comment>Base</comment>
+        <comment>&lt;Bug&gt;</comment>
         <event-block sid="819140629106323">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="396773203834428" type="spr_Player">
@@ -92,5 +98,6 @@
                 <action id="-9" name="Destroy" sid="773375991770892" type="spr_Fruits" />
             </actions>
         </event-block>
+        <comment>&lt;/Bug&gt;</comment>
     </events>
 </c2eventsheet>

@@ -11,35 +11,132 @@
                 <action id="-26" name="Restart layout" sid="646396625172515" type="System" />
             </actions>
         </event-block>
-        <event-block sid="156719946158865">
-            <conditions>
-                <condition id="0" name="On clicked" sid="142262565471907" type="ButtonDeveloper" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="997922144147089" type="Function">
-                    <param id="0" name="Name">&quot;ShotBullet&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="178459623253388" title="ForDeveloper">
             <sub-events>
-                <variable constant="0" name="Variable1" sid="718806437301886" static="0" type="number">0</variable>
-                <event-block sid="412577728862980">
+                <event-block sid="156719946158865">
                     <conditions>
-                        <condition id="0" name="On clicked" sid="595623818765865" type="ButtonDeveloper_Confirm" />
+                        <condition id="0" name="On clicked" sid="142262565471907" type="ButtonDeveloper" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="582052089747314" type="System">
-                            <param id="0" name="Variable">Variable1</param>
-                            <param id="1" name="Value">TextBox.Text</param>
+                        <action id="0" name="Call function" sid="997922144147089" type="Function">
+                            <param id="0" name="Name">&quot;ShotBullet&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-13" name="Set time scale" sid="277845996275642" type="System">
-                            <param id="0" name="Time scale">Variable1</param>
+                    </actions>
+                </event-block>
+                <event-block sid="972510585841148">
+                    <conditions>
+                        <condition id="2" name="On changed" sid="468712602223956" type="SliderBar" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="548960770550782" type="System">
+                            <param id="0" name="Time scale">SliderBar.Value</param>
+                        </action>
+                        <action id="0" name="Set text" sid="720608620819843" type="TextDeveloper">
+                            <param id="0" name="Text">SliderBar.Value</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="453767469059382">
+            <conditions>
+                <condition id="0" name="On clicked" sid="992143631334745" type="ButtonDeveloper_Save" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="575273643673794" type="AJAX">
+                    <param id="0" name="Tag">&quot;SaveGame&quot;</param>
+                    <param id="1" name="File">template.json</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="820284865064379">
+            <conditions>
+                <condition id="0" name="On completed" sid="983982513490019" type="AJAX">
+                    <param id="0" name="Tag">&quot;SaveGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="770652169466805" type="Array">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+                <action id="3" name="Set at XY" sid="440501179902839" type="Array">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">spr_Player.Health</param>
+                </action>
+                <action id="3" name="Set at XY" sid="610149963326262" type="Array">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">spr_Player.FruitsCount</param>
+                </action>
+                <action id="12" name="Download" sid="523846379932075" type="Array">
+                    <param id="0" name="Filename">&quot;Save.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="784254466223439">
+            <conditions>
+                <condition id="0" name="On clicked" sid="524164168104925" type="ButtonDeveloper_Load" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="425149268451655" type="AJAX">
+                    <param id="0" name="Tag">&quot;LoadGame&quot;</param>
+                    <param id="1" name="URL">&quot;Save.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="561887855508981">
+            <conditions>
+                <condition id="0" name="On completed" sid="271172982099561" type="AJAX">
+                    <param id="0" name="Tag">&quot;LoadGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add advanced notification" sid="262669675638745" type="Notifications">
+                    <param id="0" name="Title">&quot;Success&quot;</param>
+                    <param id="1" name="Text">&quot;AJAX successfully requested file JSON!&quot;</param>
+                    <param id="2" name="Image">&quot;icon-256.png&quot;</param>
+                    <param id="3" name="Sticky">0</param>
+                    <param id="4" name="Notification style">2</param>
+                    <param id="5" name="Time">10000</param>
+                </action>
+                <action id="11" name="Load" sid="295342870612004" type="Array">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+                <action id="-10" name="Set value" sid="758760066359589" type="spr_Player">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">Array.At(0, 1)</param>
+                </action>
+                <action id="0" name="Call function" sid="945003127514471" type="Function">
+                    <param id="0" name="Name">&quot;Update_HealthBar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-10" name="Set value" sid="176944312430871" type="spr_Player">
+                    <param id="0" name="Instance variable">FruitsCount</param>
+                    <param id="1" name="Value">Array.At(1, 1)</param>
+                </action>
+                <action id="0" name="Set text" sid="635971017972934" type="SpriteFont">
+                    <param id="0" name="Text">&quot;FRUITS: &quot; &amp; spr_Player.FruitsCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="471852692811911">
+            <conditions>
+                <condition id="1" name="On error" sid="899269124023964" type="AJAX">
+                    <param id="0" name="Tag">&quot;LoadGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add advanced notification" sid="603697046199324" type="Notifications">
+                    <param id="0" name="Title">&quot;Error&quot;</param>
+                    <param id="1" name="Text">&quot;AJAX error to load file JSON!&quot;</param>
+                    <param id="2" name="Image">&quot;icon-256.png&quot;</param>
+                    <param id="3" name="Sticky">0</param>
+                    <param id="4" name="Notification style">5</param>
+                    <param id="5" name="Time">10000</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

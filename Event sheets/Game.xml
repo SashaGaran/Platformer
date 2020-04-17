@@ -20,10 +20,6 @@
                 <action id="0" name="Import file" sid="187242431914079" type="Import">
                     <param id="0" name="Import file">&quot;MyScript.js&quot;</param>
                 </action>
-                <action behavior="Physics" id="14" name="Set stepping iterations" sid="727809093518948" type="spr_FallingPlatform">
-                    <param id="0" name="Velocity iterations">1</param>
-                    <param id="1" name="Position iterations">1</param>
-                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="628222834882360" type="DustParticle">
                     <param id="0" name="Pin to">spr_FallingPlatform</param>
                     <param id="1" name="Mode">0</param>
@@ -31,15 +27,15 @@
                 <action id="0" name="Set text" sid="218281375204940" type="SpriteFont">
                     <param id="0" name="Text">&quot;FRUITS: &quot; &amp; spr_Player.FruitsCount</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="469301041747203">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="850566642158022" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="666889193818499" type="TextDeveloper">
-                    <param id="0" name="Text">PlayerHealth</param>
+                <action id="3" name="Add clickable notification" sid="827678235765950" type="Notifications">
+                    <param id="0" name="ID">&quot;&quot;</param>
+                    <param id="1" name="Title">&quot;Hello&quot;</param>
+                    <param id="2" name="Text">&quot;Hello in my game&quot;</param>
+                    <param id="3" name="Image">&quot;icon-256.png&quot;</param>
+                    <param id="4" name="Sticky">0</param>
+                    <param id="5" name="Notification style">3</param>
+                    <param id="6" name="Time">5000</param>
+                    <param id="7" name="Close on click">1</param>
                 </action>
             </actions>
         </event-block>
