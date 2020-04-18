@@ -10,8 +10,6 @@
     <unique-id>1imjk3p1zzlds</unique-id>
     <saved-with-version>27700</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -2785,34 +2783,6 @@
                         <point x="0.5" y="1" />
                     </collision-poly>
                 </tile>
-                <tile id="216">
-                    <collision-poly>
-                        <point x="0" y="0" />
-                        <point x="1" y="0" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-                <tile id="217">
-                    <collision-poly>
-                        <point x="0" y="0" />
-                        <point x="1" y="0" />
-                        <point x="1" y="1" />
-                    </collision-poly>
-                </tile>
-                <tile id="238">
-                    <collision-poly>
-                        <point x="0" y="0" />
-                        <point x="1" y="1" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-                <tile id="239">
-                    <collision-poly>
-                        <point x="1" y="0" />
-                        <point x="1" y="1" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
             </tiles>
         </object-type>
         <object-type name="Keyboard" sid="289752965385866">
@@ -2836,9 +2806,6 @@
         <object-type global="1" name="Import" sid="560648810483524">
             <plugin id="mck_import" />
         </object-type>
-        <object-type global="1" name="Array" sid="372834596598956">
-            <plugin id="Arr" />
-        </object-type>
         <object-type name="DustParticle" sid="273848291600456">
             <plugin id="Particles" />
             <behaviors>
@@ -2847,9 +2814,6 @@
                 </behavior-type>
             </behaviors>
             <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Other\Dust Particle.png" />
-        </object-type>
-        <object-type name="AJAX" sid="854343508207698">
-            <plugin id="AJAX" />
         </object-type>
         <object-type name="SweetAlert" sid="984385156106844">
             <plugin id="SweetAlert" />
@@ -2877,7 +2841,6 @@
         <global-instance type="Keyboard" uid="2" />
         <global-instance type="Function" uid="4" />
         <global-instance type="Mouse" uid="6" />
-        <global-instance type="AJAX" uid="53" />
         <global-instance type="SweetAlert" uid="55">
             <properties>
                 <error-message></error-message>
@@ -2913,7 +2876,5 @@
         </file-folder>
         <file name="MyStyle.css" />
         <file name="MyScript.js" />
-        <file name="template.json" />
-        <file name="Save.json" />
     </files-folder>
 </c2project>

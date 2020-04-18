@@ -10,14 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Level_0</layout>
-        <event-sheet order="1">Game</event-sheet>
-        <event-sheet order="2">Player</event-sheet>
-        <event-sheet order="3">Fruits</event-sheet>
-        <event-sheet order="4">Boxes</event-sheet>
-        <event-sheet order="5">Plant</event-sheet>
-        <event-sheet order="6">Button</event-sheet>
-        <event-sheet order="7">UI</event-sheet>
+        <layout order="1">Level_0</layout>
+        <event-sheet order="2">Game</event-sheet>
+        <event-sheet order="3">Player</event-sheet>
+        <event-sheet order="4">Fruits</event-sheet>
+        <event-sheet order="5">Boxes</event-sheet>
+        <event-sheet order="6">Plant</event-sheet>
+        <event-sheet order="7">Button</event-sheet>
+        <event-sheet active="1" order="8">UI</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -36,7 +36,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Traps/FallingPlatform/" />
         <folder expanded="1" path="object-folder/Traps/Saw/" />
         <folder expanded="0" path="object-folder/Traps/Spikes/" />
-        <folder expanded="1" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/UI/" />
         <folder expanded="0" path="object-folder/Enemies/" />
         <folder expanded="1" path="object-folder/Enemies/Plant/" />
         <folder expanded="0" path="object-folder/Developer/" />
@@ -46,7 +46,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/spr_Fruits/" />
         <folder expanded="1" path="animation-folder/spr_Box_MD/" />
         <folder expanded="1" path="animation-folder/spr_CrashBox_MD/" />

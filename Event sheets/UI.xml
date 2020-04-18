@@ -58,6 +58,7 @@
         </event-block>
         <event-group description="" sid="148542586766805" title="HealthBar">
             <sub-events>
+                <comment>&lt;Govno Code&gt;</comment>
                 <event-block sid="714728823623734">
                     <conditions>
                         <condition id="0" name="On function" sid="924727345498922" type="Function">
@@ -89,6 +90,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>&lt;/Govno Code&gt;</comment>
             </sub-events>
         </event-group>
         <event-group description="" sid="637119231083211" title="Alert">

@@ -3,204 +3,197 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player</name>
     <events>
-        <variable constant="0" name="PlayerHealth" sid="732611687533097" static="0" type="number">3</variable>
-        <event-block sid="223310732730291">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="642221264646472" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="862558844946134" type="System">
-                    <param id="0" name="Variable">PlayerHealth</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-                <action id="0" name="Call function" sid="241628444228601" type="Function">
-                    <param id="0" name="Name">&quot;UpdateHeartBar&quot;</param>
-                    <param id="1" name="Parameter {n}">PlayerHealth</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Basic</comment>
-        <event-block any="1" sid="566399919168753">
-            <conditions>
-                <condition id="2" name="Key is down" sid="326233292202846" type="Keyboard">
-                    <param id="0" name="Key">37</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="259927580020111" type="Keyboard">
-                    <param id="0" name="Key">65</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="591435169420467" type="spr_Player">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="963156842874979">
-            <conditions>
-                <condition id="2" name="Key is down" sid="230716847091995" type="Keyboard">
-                    <param id="0" name="Key">39</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="310711950251819" type="Keyboard">
-                    <param id="0" name="Key">68</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="160546985269222" type="spr_Player">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="241832580344035">
-            <conditions>
-                <condition behavior="Platform" id="3" name="Is jumping" sid="236985101861719" type="spr_Player" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="708323955563540" type="spr_Player">
-                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="400775651060891">
-            <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="445361682655178" type="spr_Player" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="885764784499873" type="spr_Player">
-                    <param id="0" name="Animation">&quot;Fall&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="813580127781860">
-            <conditions>
-                <condition behavior="Platform" id="2" name="Is on floor" sid="206961551901550" type="spr_Player" />
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="502140713705472" type="spr_Player" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="256896220502853" type="spr_Player">
-                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="735064456723522">
-            <conditions>
-                <condition behavior="Platform" id="2" name="Is on floor" sid="753836151997555" type="spr_Player" />
-                <condition behavior="Platform" id="0" name="Is moving" sid="317676330738967" type="spr_Player" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="306774175360587" type="spr_Player">
-                    <param id="0" name="Animation">&quot;Run&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Wall Jump</comment>
-        <event-block sid="751111756196879">
-            <conditions>
-                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="111599376060358" type="spr_Player" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="950519884708675" title="Controls">
             <sub-events>
-                <event-block any="1" sid="171010900605625">
+                <event-block sid="944346915883122">
                     <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="935899467482850" type="spr_Player">
-                            <param id="0" name="Side">0</param>
-                        </condition>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="604763702648395" type="spr_Player">
-                            <param id="0" name="Side">1</param>
+                        <condition id="2" name="Key is down" sid="479920097363008" type="Keyboard">
+                            <param id="0" name="Key">87</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="121406588619860" type="spr_Player">
-                            <param id="0" name="Animation">&quot;WallJump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Platform" id="6" name="Set max fall speed" sid="417545001996371" type="spr_Player">
-                            <param id="0" name="Max fall speed">40</param>
-                        </action>
-                        <action behavior="Platform" id="13" name="Set double-jump" sid="168618706359193" type="spr_Player">
-                            <param id="0" name="State">1</param>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="208943713556659" type="spr_Player">
+                            <param id="0" name="Control">2</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="416154909359330">
+                <event-block any="1" sid="566399919168753">
                     <conditions>
-                        <condition id="-22" name="Else" sid="767601310347572" type="System" />
+                        <condition id="2" name="Key is down" sid="326233292202846" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="259927580020111" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="6" name="Set max fall speed" sid="899763897897619" type="spr_Player">
-                            <param id="0" name="Max fall speed">1000</param>
-                        </action>
-                        <action behavior="Platform" id="13" name="Set double-jump" sid="992026723138046" type="spr_Player">
+                        <action id="7" name="Set mirrored" sid="591435169420467" type="spr_Player">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="553681673634752" type="spr_Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="718559509661283">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="392152872142867" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="409057846912068" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="605482818022132">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="415762068475959" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="504379660240819" type="spr_Player" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="963156842874979">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="230716847091995" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="310711950251819" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="160546985269222" type="spr_Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="625005773435332" type="spr_Player">
+                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="979236300306361">
-            <conditions>
-                <condition behavior="Platform" id="10" name="Is by wall" sid="339000530707924" type="spr_Player">
-                    <param id="0" name="Side">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="893289124264217" type="spr_Player">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="335912844769428">
-            <conditions>
-                <condition behavior="Platform" id="10" name="Is by wall" sid="744904898326992" type="spr_Player">
-                    <param id="0" name="Side">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="576209331323377" type="spr_Player">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>WASD Controls</comment>
-        <event-block sid="944346915883122">
-            <conditions>
-                <condition id="2" name="Key is down" sid="479920097363008" type="Keyboard">
-                    <param id="0" name="Key">87</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="208943713556659" type="spr_Player">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="120842392921764">
-            <conditions>
-                <condition id="2" name="Key is down" sid="482651416924334" type="Keyboard">
-                    <param id="0" name="Key">65</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="553681673634752" type="spr_Player">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="314381093842015">
-            <conditions>
-                <condition id="2" name="Key is down" sid="576314293302325" type="Keyboard">
-                    <param id="0" name="Key">68</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="625005773435332" type="spr_Player">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="200641918726866" title="Animation">
+            <sub-events>
+                <event-block sid="241832580344035">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="236985101861719" type="spr_Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="708323955563540" type="spr_Player">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="400775651060891">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="445361682655178" type="spr_Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="885764784499873" type="spr_Player">
+                            <param id="0" name="Animation">&quot;Fall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="813580127781860">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="206961551901550" type="spr_Player" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="502140713705472" type="spr_Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="256896220502853" type="spr_Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735064456723522">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="753836151997555" type="spr_Player" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="317676330738967" type="spr_Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="306774175360587" type="spr_Player">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Wall Jump</comment>
+                <event-block sid="593047594116910">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="854709649580035" type="spr_Player">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="734546704199386" type="spr_Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="992114463393126">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="326579540530120" type="spr_Player">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="756996100398778" type="spr_Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="751111756196879">
+                    <conditions>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="111599376060358" type="spr_Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="171010900605625">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="935899467482850" type="spr_Player">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="604763702648395" type="spr_Player">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="121406588619860" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;WallJump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="417545001996371" type="spr_Player">
+                                    <param id="0" name="Max fall speed">40</param>
+                                </action>
+                                <action behavior="Platform" id="13" name="Set double-jump" sid="168618706359193" type="spr_Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="416154909359330">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="767601310347572" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="899763897897619" type="spr_Player">
+                                    <param id="0" name="Max fall speed">1000</param>
+                                </action>
+                                <action behavior="Platform" id="13" name="Set double-jump" sid="992026723138046" type="spr_Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="791887667985353">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="862733726108442" type="spr_Player">

@@ -763,7 +763,7 @@
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
                         <speed>200</speed>
-                        <size>8</size>
+                        <size>6</size>
                         <opacity>100</opacity>
                         <grow-rate>20</grow-rate>
                         <x-randomiser>22</x-randomiser>
@@ -1098,8 +1098,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>83</x>
-                        <y>292</y>
+                        <x>69</x>
+                        <y>278</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1940,13 +1940,6 @@
         <instance type="Import" uid="22">
             <properties>
                 <auto-import></auto-import>
-            </properties>
-        </instance>
-        <instance type="Array" uid="33">
-            <properties>
-                <width>2</width>
-                <height>2</height>
-                <depth>1</depth>
             </properties>
         </instance>
     </nonworld-instances>

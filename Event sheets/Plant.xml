@@ -17,13 +17,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="573358851252502">
+        <event-block sid="122135976027168">
             <conditions>
-                <condition id="-8" name="Compare two values" sid="776520070864731" type="System">
-                    <param id="0" name="First value">spr_Player.X</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">spr_Plant.X</param>
-                </condition>
+                <condition id="-22" name="Else" sid="558360417514693" type="System" />
+                <condition id="-4" name="Trigger once while true" sid="731861265917420" type="System" />
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="519574594269233" type="spr_Plant">
@@ -53,65 +50,47 @@
                                 <condition id="2" name="Is playing" sid="334979718464019" type="spr_Plant">
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                 </condition>
+                                <condition id="3" name="Compare frame" sid="121039289625534" type="spr_Plant">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">4</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="999871845831590" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="807587166803457" type="spr_Plant">
+                                    <param id="0" name="Object">spr_PlantBullet</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="161456875929263">
+                                <event-block sid="850425294115629">
                                     <conditions>
-                                        <condition id="3" name="Compare frame" sid="121039289625534" type="spr_Plant">
-                                            <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Number">4</param>
+                                        <condition id="-8" name="Compare two values" sid="394279317271458" type="System">
+                                            <param id="0" name="First value">spr_Player.X</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">spr_Plant.X</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="428909316964148">
-                                            <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="999871845831590" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Spawn another object" sid="807587166803457" type="spr_Plant">
-                                                    <param id="0" name="Object">spr_PlantBullet</param>
-                                                    <param id="1" name="Layer">1</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                            </actions>
-                                            <sub-events>
-                                                <event-block sid="850425294115629">
-                                                    <conditions>
-                                                        <condition id="-8" name="Compare two values" sid="394279317271458" type="System">
-                                                            <param id="0" name="First value">spr_Player.X</param>
-                                                            <param id="1" name="Comparison">2</param>
-                                                            <param id="2" name="Second value">spr_Plant.X</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Physics" id="3" name="Apply impulse" sid="100747090225414" type="spr_PlantBullet">
-                                                            <param id="0" name="Impulse X">-(0.3 + random(0.02, 0.14))</param>
-                                                            <param id="1" name="Impulse Y">0</param>
-                                                            <param id="2" name="Image point">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="430754195531151">
-                                                    <conditions>
-                                                        <condition id="-8" name="Compare two values" sid="637042480859713" type="System">
-                                                            <param id="0" name="First value">spr_Player.X</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Second value">spr_Plant.X</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Physics" id="3" name="Apply impulse" sid="545029852686342" type="spr_PlantBullet">
-                                                            <param id="0" name="Impulse X">0.3 + random(0.02, 0.14)</param>
-                                                            <param id="1" name="Impulse Y">0</param>
-                                                            <param id="2" name="Image point">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
+                                    <actions>
+                                        <action behavior="Physics" id="3" name="Apply impulse" sid="100747090225414" type="spr_PlantBullet">
+                                            <param id="0" name="Impulse X">-(0.3 + random(0.02, 0.14))</param>
+                                            <param id="1" name="Impulse Y">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="368257882961030">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="854946448141044" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="3" name="Apply impulse" sid="545029852686342" type="spr_PlantBullet">
+                                            <param id="0" name="Impulse X">0.3 + random(0.02, 0.14)</param>
+                                            <param id="1" name="Impulse Y">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -195,6 +174,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>&lt;Govno Code&gt;</comment>
                         <event-block any="1" sid="553914128171304">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="727648600134267" type="spr_PlantBullet">
@@ -208,19 +188,46 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="421098655393772">
+                        <event-block sid="903597687460931">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="617920114937774" type="spr_PlantBullet">
                                     <param id="0" name="Object">spr_Player</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="672813751483319" type="Function">
+                                <action id="0" name="Call function" sid="937093053191215" type="Function">
                                     <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="902685997583001">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="317260633137350" type="spr_PlantBullet">
+                                    <param id="0" name="Object">spr_Box_SM</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="919471670156856" type="Function">
+                                    <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="326600012240015">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="950738664391667" type="spr_PlantBullet">
+                                    <param id="0" name="Object">spr_Box_MD</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="184886322102143" type="Function">
+                                    <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>&lt;/Govno Code&gt;</comment>
                         <event-block sid="240657543887354">
                             <conditions>
                                 <condition behavior="EaseTweenMod" id="4" name="On tween end" sid="200337037668180" type="spr_PlantBulletCrash" />

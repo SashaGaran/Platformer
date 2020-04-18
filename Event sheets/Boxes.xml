@@ -45,6 +45,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="240444724657996" type="System" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="122912369396708" type="spr_Box_MD" />
@@ -110,30 +111,23 @@
                         <action id="-9" name="Destroy" sid="920591943635623" type="spr_CrashBox_MD" />
                     </actions>
                 </event-block>
-                <event-block any="1" sid="431810682374641">
+                <event-block sid="431810682374641">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="241202771992272" type="spr_Player">
                             <param id="0" name="Object">spr_Box_MD</param>
                         </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="454225275070511" type="spr_Player">
+                            <param id="0" name="Object">spr_Box_MD</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-10</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="684384303515974">
-                            <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="454225275070511" type="spr_Player">
-                                    <param id="0" name="Object">spr_Box_MD</param>
-                                    <param id="1" name="Offset X">0</param>
-                                    <param id="2" name="Offset Y">-10</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="790834808025712" type="Function">
-                                    <param id="0" name="Name">&quot;Hit_Box_MD&quot;</param>
-                                    <param id="1" name="Parameter {n}">spr_Box_MD.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Call function" sid="790834808025712" type="Function">
+                            <param id="0" name="Name">&quot;Hit_Box_MD&quot;</param>
+                            <param id="1" name="Parameter {n}">spr_Box_MD.UID</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -179,6 +173,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="261789601390741" type="System" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="782828688696492" type="spr_Box_SM" />
@@ -244,30 +239,23 @@
                         <action id="-9" name="Destroy" sid="904697654500608" type="spr_CrashBox_SM" />
                     </actions>
                 </event-block>
-                <event-block any="1" sid="132948935331496">
+                <event-block sid="132948935331496">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="920947721114400" type="spr_Player">
                             <param id="0" name="Object">spr_Box_SM</param>
                         </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="608331143603692" type="spr_Player">
+                            <param id="0" name="Object">spr_Box_SM</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">10</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block any="1" sid="558150407645846">
-                            <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="608331143603692" type="spr_Player">
-                                    <param id="0" name="Object">spr_Box_SM</param>
-                                    <param id="1" name="Offset X">0</param>
-                                    <param id="2" name="Offset Y">10</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="259570093865764" type="Function">
-                                    <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
-                                    <param id="1" name="Parameter {n}">spr_Box_SM.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Call function" sid="259570093865764" type="Function">
+                            <param id="0" name="Name">&quot;Hit_Box_SM&quot;</param>
+                            <param id="1" name="Parameter {n}">spr_Box_SM.UID</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
