@@ -19,7 +19,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Animation</comment>
         <event-block any="1" sid="123319482068560">
             <conditions>
                 <condition id="4" name="On finished" sid="932865815845390" type="spr_Fruits">
@@ -59,7 +58,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Base</comment>
         <comment>&lt;Bug&gt;</comment>
         <event-block sid="819140629106323">
             <conditions>

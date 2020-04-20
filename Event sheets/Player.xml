@@ -5,6 +5,7 @@
     <events>
         <event-group description="" sid="950519884708675" title="Controls">
             <sub-events>
+                <comment>&lt;Govno Code&gt;</comment>
                 <event-block sid="944346915883122">
                     <conditions>
                         <condition id="2" name="Key is down" sid="479920097363008" type="Keyboard">
@@ -14,24 +15,6 @@
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="208943713556659" type="spr_Player">
                             <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="566399919168753">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="326233292202846" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="259927580020111" type="Keyboard">
-                            <param id="0" name="Key">65</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="591435169420467" type="spr_Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="553681673634752" type="spr_Player">
-                            <param id="0" name="Control">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -56,6 +39,33 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block any="1" sid="566399919168753">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="326233292202846" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="259927580020111" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="553681673634752" type="spr_Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="774455439930994">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="139673045665245" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="591435169420467" type="spr_Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block any="1" sid="963156842874979">
                     <conditions>
                         <condition id="2" name="Key is down" sid="230716847091995" type="Keyboard">
@@ -66,14 +76,24 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="160546985269222" type="spr_Player">
-                            <param id="0" name="State">1</param>
-                        </action>
                         <action behavior="Platform" id="7" name="Simulate control" sid="625005773435332" type="spr_Player">
                             <param id="0" name="Control">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="813421880672315">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="845173685022587" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="160546985269222" type="spr_Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
+                <comment>&lt;/Govno Code&gt;</comment>
             </sub-events>
         </event-group>
         <event-group description="" sid="200641918726866" title="Animation">
@@ -124,7 +144,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Wall Jump</comment>
+                <comment>&lt;We need to redo it&gt;</comment>
                 <event-block sid="593047594116910">
                     <conditions>
                         <condition behavior="Platform" id="10" name="Is by wall" sid="854709649580035" type="spr_Player">
@@ -192,12 +212,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>&lt;/We need to redo it&gt;</comment>
             </sub-events>
         </event-group>
         <event-block sid="791887667985353">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="862733726108442" type="spr_Player">
-                    <param id="0" name="Object">spr_PlantBullet</param>
+                <condition id="0" name="On function" sid="970856237798756" type="Function">
+                    <param id="0" name="Name">&quot;Player_MinusHealth&quot;</param>
                 </condition>
             </conditions>
             <actions />
@@ -225,8 +246,8 @@
         </event-block>
         <event-block sid="348729937369610">
             <conditions>
-                <condition id="0" name="On key pressed" sid="494702973998617" type="Keyboard">
-                    <param id="0" name="Key">75</param>
+                <condition id="0" name="On function" sid="141782752404214" type="Function">
+                    <param id="0" name="Name">&quot;Player_PlusHealth&quot;</param>
                 </condition>
             </conditions>
             <actions />

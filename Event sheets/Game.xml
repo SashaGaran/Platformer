@@ -20,6 +20,10 @@
                 <action id="0" name="Import file" sid="187242431914079" type="Import">
                     <param id="0" name="Import file">&quot;MyScript.js&quot;</param>
                 </action>
+                <action id="-9" name="Destroy" sid="901856874108455" type="spr_CrashBox_MD" />
+                <action id="-9" name="Destroy" sid="114911693072528" type="spr_CrashBox_SM" />
+                <action id="-9" name="Destroy" sid="376322370952209" type="spr_PlantBullet" />
+                <action id="-9" name="Destroy" sid="493584019810342" type="spr_PlantBulletCrash" />
                 <action behavior="Pin" id="0" name="Pin to object" sid="628222834882360" type="DustParticle">
                     <param id="0" name="Pin to">spr_FallingPlatform</param>
                     <param id="1" name="Mode">0</param>

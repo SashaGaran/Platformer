@@ -15,9 +15,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="3">Player</event-sheet>
         <event-sheet order="4">Fruits</event-sheet>
         <event-sheet order="5">Boxes</event-sheet>
-        <event-sheet order="6">Plant</event-sheet>
+        <event-sheet active="1" order="6">Plant</event-sheet>
         <event-sheet order="7">Button</event-sheet>
-        <event-sheet active="1" order="8">UI</event-sheet>
+        <event-sheet order="8">UI</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -40,6 +40,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Enemies/" />
         <folder expanded="1" path="object-folder/Enemies/Plant/" />
         <folder expanded="0" path="object-folder/Developer/" />
+        <folder expanded="0" path="object-folder/System/" />
+        <folder expanded="1" path="object-folder/Backgrounds/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="event-folder/Enemies/" />
@@ -62,6 +64,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_PlantBulletCrash/" />
         <folder expanded="1" path="animation-folder/AnimationMultimetr/" />
         <folder expanded="1" path="animation-folder/Multimetr/" />
+        <folder expanded="1" path="animation-folder/ico_GitHub/" />
         <folder expanded="1" path="animation-folder/spr_Player/" />
         <folder expanded="1" path="animation-folder/spr_Player/PixelFrog/" />
     </folders-expanded>

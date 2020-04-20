@@ -35,7 +35,7 @@
                         <event-block sid="798270277851728">
                             <conditions>
                                 <condition id="0" name="On function" sid="776572066333233" type="Function">
-                                    <param id="0" name="Name">&quot;ShotBullet&quot;</param>
+                                    <param id="0" name="Name">&quot;Plant_ShotBullet&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -135,6 +135,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="309711904781885">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="208835832350721" type="spr_PlantBullet">
+                                    <param id="0" name="Object">spr_Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="586760180940189" type="Function">
+                                    <param id="0" name="Name">&quot;Player_MinusHealth&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="951104809628494" title="obj_BulletCrash">
@@ -142,7 +155,7 @@
                         <event-block sid="709960701467770">
                             <conditions>
                                 <condition id="0" name="On function" sid="596059825713774" type="Function">
-                                    <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
+                                    <param id="0" name="Name">&quot;Plant_SpawnBulletCrash&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -183,7 +196,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="926359662760183" type="Function">
-                                    <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
+                                    <param id="0" name="Name">&quot;Plant_SpawnBulletCrash&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -195,8 +208,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="937093053191215" type="Function">
-                                    <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
+                                <action id="0" name="Call function" sid="373188416969686" type="Function">
+                                    <param id="0" name="Name">&quot;Plant_SpawnBulletCrash&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -208,8 +221,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="919471670156856" type="Function">
-                                    <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
+                                <action id="0" name="Call function" sid="438710460871687" type="Function">
+                                    <param id="0" name="Name">&quot;Plant_SpawnBulletCrash&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -221,8 +234,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="184886322102143" type="Function">
-                                    <param id="0" name="Name">&quot;Plant_BulletCrash&quot;</param>
+                                <action id="0" name="Call function" sid="863772216177738" type="Function">
+                                    <param id="0" name="Name">&quot;Plant_SpawnBulletCrash&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>

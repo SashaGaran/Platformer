@@ -10,9 +10,11 @@
     <unique-id>1imjk3p1zzlds</unique-id>
     <saved-with-version>27700</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Chris Hackmann (aka linkman2004)" id="MagiCam" version="6.5">MagiCam</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
@@ -2361,12 +2363,6 @@
             <object-type name="ButtonDeveloper_Confirm" sid="832836215335568">
                 <plugin id="Button" />
             </object-type>
-            <object-type name="ButtonDeveloper_Load" sid="185960386889146">
-                <plugin id="Button" />
-            </object-type>
-            <object-type name="ButtonDeveloper_Save" sid="904335958647395">
-                <plugin id="Button" />
-            </object-type>
             <object-type name="SliderBar" sid="910750997875324">
                 <plugin id="sliderbar" />
             </object-type>
@@ -2374,6 +2370,99 @@
                 <plugin id="TextBox" />
             </object-type>
         </object-folder>
+        <object-folder name="System">
+            <object-type name="Browser" sid="612005719679268">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="954737842827367">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="LocalStorage" sid="743043538991090">
+                <plugin id="LocalStorage" />
+            </object-type>
+            <object-type name="Mouse" sid="608837022781183">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type global="1" name="Import" sid="560648810483524">
+                <plugin id="mck_import" />
+            </object-type>
+            <object-type name="MagiCam" sid="993855130377728">
+                <plugin id="MagiCam" />
+            </object-type>
+            <object-type name="SweetAlert" sid="984385156106844">
+                <plugin id="SweetAlert" />
+            </object-type>
+            <object-type name="Keyboard" sid="289752965385866">
+                <plugin id="Keyboard" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Backgrounds">
+            <object-type name="bckgr_Pink" sid="620164070321763">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="922566683345430">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Background\Pink.png" />
+            </object-type>
+        </object-folder>
+        <object-type name="Ground" sid="755871967593294">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="831535343187294">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="411915032224116">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Terrain\Terrain (16x16).png" />
+            <tiles>
+                <tile id="9">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="0.5" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="10">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="0.5" y="1" />
+                    </collision-poly>
+                </tile>
+            </tiles>
+        </object-type>
+        <object-type name="DustParticle" sid="273848291600456">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Pin" sid="970475503913388">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Other\Dust Particle.png" />
+        </object-type>
+        <object-type name="ico_GitHub" sid="614985971753593">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596891522032363" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User\Desktop\GitHub-Mark\PNG\GitHub-Mark-32px.png">
+                        <collision-poly>
+                            <point x="0" y="0.5" />
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15625" y="0.84375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="spr_Player" sid="819834066908733">
             <plugin id="Sprite" />
             <instance-variables>
@@ -2757,70 +2846,6 @@
                 </animation-folder>
             </animation-folder>
         </object-type>
-        <object-type name="Ground" sid="755871967593294">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="831535343187294">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Physics" sid="411915032224116">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Terrain\Terrain (16x16).png" />
-            <tiles>
-                <tile id="9">
-                    <collision-poly>
-                        <point x="0" y="0" />
-                        <point x="1" y="0" />
-                        <point x="0.5" y="1" />
-                    </collision-poly>
-                </tile>
-                <tile id="10">
-                    <collision-poly>
-                        <point x="0" y="0" />
-                        <point x="1" y="0" />
-                        <point x="0.5" y="1" />
-                    </collision-poly>
-                </tile>
-            </tiles>
-        </object-type>
-        <object-type name="Keyboard" sid="289752965385866">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="TiledBackground" sid="620164070321763">
-            <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Sine" sid="922566683345430">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Background\Pink.png" />
-        </object-type>
-        <object-type name="Function" sid="954737842827367">
-            <plugin id="Function" />
-        </object-type>
-        <object-type name="Mouse" sid="608837022781183">
-            <plugin id="Mouse" />
-        </object-type>
-        <object-type global="1" name="Import" sid="560648810483524">
-            <plugin id="mck_import" />
-        </object-type>
-        <object-type name="DustParticle" sid="273848291600456">
-            <plugin id="Particles" />
-            <behaviors>
-                <behavior-type name="Pin" sid="970475503913388">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="D:\GameDevelop\GameAssets\Packs\Pixel Adventure\Pixel Adventure 1\Other\Dust Particle.png" />
-        </object-type>
-        <object-type name="SweetAlert" sid="984385156106844">
-            <plugin id="SweetAlert" />
-        </object-type>
-        <object-type name="MagiCam" sid="993855130377728">
-            <plugin id="MagiCam" />
-        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -2862,6 +2887,8 @@
             </properties>
         </global-instance>
         <global-instance type="MagiCam" uid="57" />
+        <global-instance type="Browser" uid="53" />
+        <global-instance type="LocalStorage" uid="51" />
     </global-instances>
     <sounds-folder />
     <music-folder />

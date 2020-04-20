@@ -117,5 +117,45 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="136467798144472" title="GoToRepository">
+            <sub-events>
+                <event-block sid="510702042191348">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="887123305018435" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ico_GitHub</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Open with inputs" sid="514682579532905" type="SweetAlert">
+                            <param id="0" name="Tag">&quot;SourceCode&quot;</param>
+                            <param id="1" name="Message type">5</param>
+                            <param id="2" name="Title">&quot;Source code&quot;</param>
+                            <param id="3" name="Text">&quot;Go to source code this game ?&quot;</param>
+                            <param id="4" name="Button confirm">&quot;Yes&quot;</param>
+                            <param id="5" name="Button cancel">&quot;No later&quot;</param>
+                            <param id="6" name="Allow cancel with escape key">1</param>
+                            <param id="7" name="Allow cancel with outside click">1</param>
+                            <param id="8" name="Error message">0</param>
+                            <param id="9" name="Input {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="699825849430552">
+                    <conditions>
+                        <condition id="2" name="On Confim" sid="270025611169781" type="SweetAlert">
+                            <param id="0" name="Tag">&quot;SourceCode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Open URL in new window" sid="556064276978144" type="Browser">
+                            <param id="0" name="URL">&quot;https://github.com/SashaGaran/Platformer&quot;</param>
+                            <param id="1" name="Tag">&quot;Repository&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
