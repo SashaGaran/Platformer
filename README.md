@@ -1,2 +1,4 @@
-# Platformer
- Platformer on Construct 2
+# Platformer "Pixel Frog"
+Platformer on engine Construct 2
+Features
+> Graphics
