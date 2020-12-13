@@ -1,5 +1,5 @@
 # Platformer "Pixel Frog"
-Platformer on engine Construct 2
+Platformer on game engine Construct 2
 --------------------------------------
 ## Features
 * *Graphics*
